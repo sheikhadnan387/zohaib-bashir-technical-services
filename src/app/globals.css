@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-orange: #f97316;
+  --color-orange-deep: #ea580c;
+  --color-orange-accent: #ff8a1f;
+  --color-near-black: #0b0d0f;
+  --color-charcoal: #15191d;
+  --color-dark-gray: #242a30;
+  --color-bg: #f7f7f5;
+  --color-white: #ffffff;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+
+  --background: var(--color-white);
+  --foreground: var(--color-near-black);
 }
 
 @theme inline {
+  --color-brand-orange: var(--color-orange);
+  --color-brand-orange-deep: var(--color-orange-deep);
+  --color-brand-orange-accent: var(--color-orange-accent);
+  --color-brand-black: var(--color-near-black);
+  --color-brand-charcoal: var(--color-charcoal);
+  --color-brand-gray: var(--color-dark-gray);
+  --color-brand-bg: var(--color-bg);
+  --color-brand-white: var(--color-white);
+  --color-brand-muted: var(--color-muted);
+  --color-brand-border: var(--color-border);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-heading);
+
+  --animate-marquee: marquee 34s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-orange);
+  color: var(--color-white);
+}
+
+.container-edge {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-edge {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-edge {
+    padding-inline: 4rem;
+  }
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: 58px;
+  }
 }

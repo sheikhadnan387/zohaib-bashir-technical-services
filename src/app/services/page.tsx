@@ -1,0 +1,51 @@
+import type { Metadata } from "next";
+import { services } from "@/lib/services";
+import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
+import { PageHeader } from "@/components/sections/PageHeader";
+import { ContactCTA } from "@/components/sections/ContactCTA";
+import { ServiceCard } from "@/components/ui/ServiceCard";
+import { Reveal } from "@/components/ui/Reveal";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Our Services",
+  description:
+    "Technical installation, maintenance and property services in Dubai — infrastructure & network, carpentry, tiling, HVAC, pool maintenance, cleaning, painting, aluminum & glass and electromechanical services.",
+  path: "/services",
+});
+
+const breadcrumbItems = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+];
+
+export default function ServicesIndexPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbItems)) }}
+      />
+
+      <PageHeader
+        breadcrumbItems={breadcrumbItems}
+        eyebrow="What We Do"
+        title="Technical Services Across Every Discipline."
+        description="Nine technical disciplines, delivered by one coordinated team for residential and commercial properties across Dubai."
+      />
+
+      <section className="bg-white py-16 sm:py-24">
+        <div className="container-edge">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, i) => (
+              <Reveal key={service.slug} delay={(i % 3) * 0.08} y={16}>
+                <ServiceCard service={service} className="h-[300px]" />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ContactCTA />
+    </>
+  );
+}
