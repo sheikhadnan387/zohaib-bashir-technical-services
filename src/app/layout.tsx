@@ -52,9 +52,9 @@ export const metadata: Metadata = {
       "Shampoo cleaning, painting, AC services and flooring work across Dubai.",
   },
   icons: {
-    icon: "/logo/logo.svg",
-    shortcut: "/logo/logo.svg",
-    apple: "/logo/logo.svg",
+    icon: "/logo/favicon.svg",
+    shortcut: "/logo/favicon.svg",
+    apple: "/logo/favicon.svg",
   },
   robots: {
     index: true,
