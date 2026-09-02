@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import { company } from "@/lib/company";
@@ -6,15 +7,19 @@ import { Reveal } from "@/components/ui/Reveal";
 export function ContactCTA() {
   return (
     <section className="relative overflow-hidden bg-brand-black py-20 sm:py-28">
-      <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-gradient-to-br from-brand-orange to-brand-orange-deep lg:block" />
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
+      {/* Property Background Visual */}
+      <Image
+        src="/images/home/cta-property.webp"
+        alt="Dubai Luxury Property Services"
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
       />
+
+      {/* Dark Readability Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/85 to-brand-black/75" />
+      <div className="absolute inset-0 bg-brand-black/40" />
+      <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-l from-brand-orange/15 to-transparent lg:block" />
       <div className="container-edge relative">
         <Reveal className="max-w-xl">
           <h2 className="font-heading text-[36px] font-bold leading-[1.05] text-white sm:text-[48px] lg:text-[56px]">

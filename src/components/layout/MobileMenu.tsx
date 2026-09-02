@@ -26,7 +26,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
         >
           <div className="container-edge flex items-center justify-between py-5">
             <Link href="/" onClick={onClose} className="focus-ring">
-              <Logo tone="light" markSize="h-8 w-8" />
+              <Logo tone="light" size="h-11 sm:h-12" />
             </Link>
             <button
               type="button"

@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
+import { SiteLoader } from "@/components/ui/SiteLoader";
 import { company } from "@/lib/company";
 import { localBusinessSchema } from "@/lib/seo";
 
@@ -27,14 +28,13 @@ export const metadata: Metadata = {
     template: `%s | ${company.legalName}`,
   },
   description:
-    "Professional technical installation, maintenance and property services for residential and commercial properties across Dubai — HVAC, carpentry, tiling, pools, cleaning, painting, aluminum & glass, electromechanical and network services.",
+    "Professional shampoo cleaning, painting, AC services and flooring work for residential and commercial properties across Dubai.",
   keywords: [
     "Technical Services Dubai",
-    "Technical Maintenance Dubai",
-    "HVAC Maintenance Dubai",
-    "AC Maintenance Dubai",
-    "Carpentry Services Dubai",
-    "Swimming Pool Maintenance Dubai",
+    "Shampoo Cleaning Dubai",
+    "AC Services Dubai",
+    "Painting Services Dubai",
+    "Flooring Services Dubai",
   ],
   authors: [{ name: company.legalName }],
   openGraph: {
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     siteName: company.legalName,
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Professional technical installation, maintenance and property services for residential and commercial properties across Dubai.",
+      "Professional shampoo cleaning, painting, AC services and flooring work for residential and commercial properties across Dubai.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Professional technical installation, maintenance and property services across Dubai.",
+      "Shampoo cleaning, painting, AC services and flooring work across Dubai.",
   },
   robots: {
     index: true,
@@ -65,6 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body className="antialiased">
+        <SiteLoader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}

@@ -4,7 +4,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const tallIndices = new Set([0, 4, 7]);
+const tallIndices = new Set([1, 3]);
 
 export function ServicesShowcase() {
   return (

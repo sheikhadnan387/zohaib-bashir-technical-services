@@ -36,6 +36,8 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Talk to Our Team"
         description="Reach us directly, or send through your project details and we'll get back to you."
+        image="/images/pages/contact-hero.webp"
+        imageAlt="Contact Zohaib Bashir Technical Services team in Dubai"
       />
 
       <section className="bg-white py-16 sm:py-24">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -7,12 +8,63 @@ export function PageHeader({
   eyebrow,
   title,
   description,
+  image,
+  imageAlt,
 }: {
   breadcrumbItems: { name: string; path: string }[];
   eyebrow?: string;
   title: React.ReactNode;
   description?: string;
+  image?: string;
+  imageAlt?: string;
 }) {
+  if (image) {
+    const altText = imageAlt || (typeof title === "string" ? title : "Page banner");
+
+    return (
+      <section className="pt-4 sm:pt-6 pb-8 sm:pb-12 lg:pb-16 overflow-hidden">
+        <div className="container-edge">
+          <div className="relative w-full h-[320px] sm:h-[360px] md:h-[400px] lg:h-[450px] xl:h-[480px] 2xl:h-[500px] overflow-hidden rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] 2xl:rounded-[32px] bg-brand-black shadow-sm">
+            {/* Photographic Background */}
+            <Image
+              src={image}
+              alt={altText}
+              fill
+              priority
+              sizes="(max-width: 1440px) 100vw, 1360px"
+              className="object-cover object-center"
+            />
+
+            {/* Readability Overlays */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/45 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black/65 via-brand-black/25 to-transparent" />
+
+            {/* Bottom-Left Aligned Content */}
+            <div className="relative z-10 flex h-full flex-col justify-end p-6 sm:p-10 lg:p-14">
+              <Reveal>
+                <Breadcrumb items={breadcrumbItems} tone="light" />
+                {eyebrow && (
+                  <Eyebrow tone="light" className="mt-3.5 mb-2 sm:mb-3">
+                    {eyebrow}
+                  </Eyebrow>
+                )}
+                <h1 className="mt-2.5 font-heading text-[28px] sm:text-[38px] md:text-[44px] lg:text-[52px] font-bold leading-[1.06] text-white">
+                  {title}
+                </h1>
+                {description && (
+                  <p className="mt-2.5 sm:mt-3.5 max-w-xl text-[13.5px] sm:text-[15.5px] leading-relaxed text-white/80 line-clamp-3 sm:line-clamp-none">
+                    {description}
+                  </p>
+                )}
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Backward-compatible fallback presentation for text-only headers (Terms, Privacy Policy, etc.)
   return (
     <section className="relative overflow-hidden bg-brand-black py-16 sm:py-24">
       <div
@@ -40,3 +92,4 @@ export function PageHeader({
     </section>
   );
 }
+

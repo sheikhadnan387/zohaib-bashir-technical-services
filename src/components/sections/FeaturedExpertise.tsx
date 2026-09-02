@@ -1,36 +1,39 @@
-import { Wind, Hammer, Cog } from "lucide-react";
+import Image from "next/image";
+import { Sparkles, Wind, Hammer } from "lucide-react";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderVisual } from "@/components/ui/PlaceholderVisual";
 import { Reveal } from "@/components/ui/Reveal";
 
 const featured = [
   {
-    icon: Wind,
-    eyebrow: "Air Conditioning & Ventilation",
-    title: "Comfort engineered for every space.",
+    icon: Sparkles,
+    eyebrow: "Shampoo Cleaning",
+    title: "Deep cleaning that brings fabrics back to life.",
     description:
-      "We install and maintain air-conditioning, ventilation and air filtration systems, keeping indoor environments comfortable and running efficiently across Dubai's climate.",
-    href: "/services/hvac",
-    cta: "Explore HVAC",
+      "We provide professional shampoo cleaning for sofas, carpets, mattresses and curtains, using proven techniques and industry-standard equipment to remove dirt, allergens and stains while preserving material quality.",
+    href: "/services/shampoo-cleaning",
+    cta: "Explore Shampoo Cleaning",
+    image: "/images/home/featured-cleaning.webp",
+  },
+  {
+    icon: Wind,
+    eyebrow: "AC Services",
+    title: "Reliable cooling engineered for Dubai's climate.",
+    description:
+      "We install, service and maintain AC units, ensuring systems run efficiently and reliably throughout the year. From routine maintenance to fault diagnosis and repair, we keep your cooling systems performing at their best.",
+    href: "/services/ac-services",
+    cta: "Explore AC Services",
+    image: "/images/home/featured-ac.webp",
   },
   {
     icon: Hammer,
-    eyebrow: "Carpentry & Wood Flooring",
-    title: "Craftsmanship in every detail.",
+    eyebrow: "Flooring & Parquet Work",
+    title: "Precision flooring from preparation to finishing.",
     description:
-      "From fitted joinery to full flooring installations, our carpentry work is built around accurate measurement, considered material choices and a clean, level finish.",
-    href: "/services/carpentry-wood-flooring",
-    cta: "Explore Carpentry",
-  },
-  {
-    icon: Cog,
-    eyebrow: "Electromechanical Equipment",
-    title: "The systems that keep a property running.",
-    description:
-      "We install and maintain the electromechanical equipment that supports a building's core systems, with routine inspection to keep faults from becoming disruptions.",
-    href: "/services/electromechanical",
-    cta: "Explore Electromechanical",
+      "We install and maintain wood, parquet and laminate flooring with careful attention to substrate preparation, material selection and precision installation for lasting durability.",
+    href: "/services/flooring-parquet",
+    cta: "Explore Flooring & Parquet",
+    image: "/images/home/featured-flooring.webp",
   },
 ];
 
@@ -39,7 +42,6 @@ export function FeaturedExpertise() {
     <section className="bg-brand-bg py-4 sm:py-6">
       {featured.map((item, i) => {
         const reversed = i % 2 === 1;
-        const Icon = item.icon;
         return (
           <div key={item.href} className="container-edge py-14 sm:py-16">
             <div
@@ -48,12 +50,16 @@ export function FeaturedExpertise() {
               }`}
             >
               <Reveal>
-                <PlaceholderVisual
-                  icon={Icon}
-                  label={item.eyebrow}
-                  tone="dark"
-                  className="relative aspect-[4/3] w-full rounded-lg sm:aspect-[16/10]"
-                />
+                <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-brand-black/10 bg-brand-black shadow-[0_12px_30px_-10px_rgba(0,0,0,0.15)] sm:aspect-[16/10]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-black/50 via-transparent to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80" />
+                </div>
               </Reveal>
               <Reveal delay={0.12}>
                 <Eyebrow>{item.eyebrow}</Eyebrow>

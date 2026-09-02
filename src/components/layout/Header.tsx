@@ -38,13 +38,17 @@ export function Header() {
         className={clsx(
           "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
           scrolled
-            ? "border-white/10 bg-brand-black/95 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md"
-            : "border-white/5 bg-brand-black/80 py-5 backdrop-blur-sm"
+            ? "border-white/10 bg-brand-black/95 py-1.5 sm:py-2 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md"
+            : "border-white/5 bg-brand-black/85 py-2.5 sm:py-3 backdrop-blur-sm"
         )}
       >
         <div className="container-edge flex items-center justify-between">
-          <Link href="/" className="focus-ring shrink-0" aria-label={`${"Zohaib Bashir Technical Services"} — home`}>
-            <Logo tone="light" markSize="h-8 w-8 sm:h-9 sm:w-9" />
+          <Link href="/" className="focus-ring shrink-0" aria-label="Zohaib Bashir Technical Services — home">
+            <Logo
+              tone="light"
+              size={scrolled ? "h-10 sm:h-11 lg:h-12" : "h-11 sm:h-12 lg:h-[58px]"}
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-9 lg:flex" aria-label="Primary">

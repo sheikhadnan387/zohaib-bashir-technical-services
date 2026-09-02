@@ -13,7 +13,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Zohaib Bashir Technical Services is a Dubai-based Sole Establishment providing technical installation, maintenance and property services across nine disciplines.",
+    "Zohaib Bashir Technical Services is a Dubai-based provider offering shampoo cleaning, painting, AC services and flooring work.",
   path: "/about",
 });
 
@@ -43,7 +43,9 @@ export default function AboutPage() {
         breadcrumbItems={breadcrumbItems}
         eyebrow="About Us"
         title="Technical Capability. Professional Execution."
-        description="A Dubai-based technical services provider working across nine disciplines for residential and commercial properties."
+        description="A Dubai-based service provider specializing in shampoo cleaning, painting, AC services and flooring work for residential and commercial properties."
+        image="/images/pages/about-hero.webp"
+        imageAlt="Zohaib Bashir Technical Services professional team in Dubai"
       />
 
       {/* Who We Are */}
@@ -60,10 +62,9 @@ export default function AboutPage() {
             </p>
             <p className="mt-5 text-[15.5px] leading-relaxed text-brand-muted">
               Based at Dubai Investment Park 1, the company provides
-              technical installation, maintenance and property-related
-              services to residential and commercial properties across
-              Dubai, working across nine distinct technical disciplines
-              under one coordinated team.
+              shampoo cleaning, painting, AC services and flooring work
+              to residential and commercial properties across Dubai, with
+              a focus on quality execution and professional service delivery.
             </p>
           </Reveal>
         </div>
@@ -78,11 +79,11 @@ export default function AboutPage() {
               <h2 className="mt-5 font-heading text-[30px] font-bold leading-tight text-brand-black sm:text-[36px]">
                 Our Service
                 <br />
-                Disciplines.
+                Offerings.
               </h2>
               <p className="mt-5 max-w-sm text-[14.5px] leading-relaxed text-brand-muted">
-                Every discipline is handled with the same standard of
-                preparation, execution and finish.
+                Each service is delivered with the same standard of
+                preparation, execution and attention to detail.
               </p>
             </Reveal>
 

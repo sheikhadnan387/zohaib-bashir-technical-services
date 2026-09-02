@@ -20,7 +20,7 @@ export function Footer() {
       <div className="container-edge grid grid-cols-1 gap-12 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-[1.3fr_0.9fr_1.1fr_1.1fr]">
         <div>
           <Link href="/" className="focus-ring inline-block">
-            <Logo tone="light" markSize="h-10 w-10" />
+            <Logo tone="light" size="h-16 sm:h-[72px] lg:h-20" />
           </Link>
           <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-white/55">
             Technical installation, maintenance and property services across

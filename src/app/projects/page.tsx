@@ -7,7 +7,7 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = buildMetadata({
   title: "Projects",
   description:
-    "A selection of the project categories Zohaib Bashir Technical Services works across in Dubai — HVAC, interior, maintenance, pools, painting and technical works.",
+    "Project examples showcasing shampoo cleaning, painting, AC services and flooring work across Dubai.",
   path: "/projects",
 });
 
@@ -29,6 +29,8 @@ export default function ProjectsPage() {
         eyebrow="Portfolio"
         title="Selected Work"
         description="Representative categories of technical work carried out across Dubai properties."
+        image="/images/pages/projects-hero.webp"
+        imageAlt="Selected residential and commercial technical projects in Dubai"
       />
 
       <section className="bg-white py-16 sm:py-24">

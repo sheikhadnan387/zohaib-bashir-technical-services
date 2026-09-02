@@ -27,9 +27,9 @@ const pillars = [
   {
     number: "04",
     icon: Layers,
-    title: "Multi-Service Capability",
+    title: "Focused Expertise",
     description:
-      "A single technical team across nine disciplines means fewer contractors to coordinate for property owners and managers.",
+      "Specialized capability across shampoo cleaning, painting, AC services and flooring means each service receives proper attention and skill.",
   },
 ];
 

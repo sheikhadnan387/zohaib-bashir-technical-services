@@ -1,22 +1,29 @@
 import { MapPin } from "lucide-react";
-import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderVisual } from "@/components/ui/PlaceholderVisual";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 export function Hero() {
   return (
     <section className="relative h-[calc(100svh-84px)] min-h-[600px] w-full overflow-hidden bg-brand-black">
-      <PlaceholderVisual
-        icon={Building2}
-        label="Dubai Property Services"
-        tone="dark"
-        className="absolute inset-0 h-full w-full"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/55 to-brand-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-black/70 via-transparent to-transparent" />
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover object-center pointer-events-none"
+      >
+        <source src="/video/hero-services.mp4" type="video/mp4" />
+      </video>
 
-      <div className="container-edge relative flex h-full flex-col justify-end pb-16 sm:justify-center sm:pb-0">
+      {/* Readability Overlays */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black/75 via-brand-black/45 to-transparent sm:via-brand-black/35" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-brand-black/10" />
+
+      {/* Hero Content */}
+      <div className="container-edge relative z-10 flex h-full flex-col justify-end pb-16 sm:justify-center sm:pb-0">
         <RevealGroup className="max-w-3xl" stagger={0.12}>
           <RevealItem>
             <div className="flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.28em] text-brand-orange">

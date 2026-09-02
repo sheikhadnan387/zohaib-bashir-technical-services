@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = buildMetadata({
   title: "Our Services",
   description:
-    "Technical installation, maintenance and property services in Dubai — infrastructure & network, carpentry, tiling, HVAC, pool maintenance, cleaning, painting, aluminum & glass and electromechanical services.",
+    "Shampoo cleaning, painting, AC services and flooring work in Dubai — professional services for residential and commercial properties.",
   path: "/services",
 });
 
@@ -29,8 +29,10 @@ export default function ServicesIndexPage() {
       <PageHeader
         breadcrumbItems={breadcrumbItems}
         eyebrow="What We Do"
-        title="Technical Services Across Every Discipline."
-        description="Nine technical disciplines, delivered by one coordinated team for residential and commercial properties across Dubai."
+        title="Our Four Core Services."
+        description="Shampoo cleaning, painting, AC services and flooring work delivered with the same standard of quality and attention to detail."
+        image="/images/pages/services-hero.webp"
+        imageAlt="Professional technical services and maintenance in Dubai"
       />
 
       <section className="bg-white py-16 sm:py-24">

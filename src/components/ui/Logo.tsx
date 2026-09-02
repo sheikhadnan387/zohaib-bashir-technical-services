@@ -1,50 +1,49 @@
+import Image from "next/image";
+import clsx from "clsx";
 import { company } from "@/lib/company";
 
-/**
- * ZB monogram — a single geometric form built from straight strokes only.
- * The bold zig-zag reads as "Z" across the full frame; the vertical spine
- * with two square brackets on the right reads as "B", sharing the spine's
- * intersection with the Z diagonal at the mark's centre.
- */
+export function Logo({
+  className = "",
+  size = "h-11 sm:h-12 lg:h-[58px]",
+  markSize,
+  priority = false,
+}: {
+  className?: string;
+  tone?: "dark" | "light";
+  markSize?: string;
+  size?: string;
+  priority?: boolean;
+}) {
+  const finalSize = markSize ? markSize.replace(/w-\S+/g, "w-auto") : size;
+
+  return (
+    <span className={clsx("inline-flex items-center", className)}>
+      <Image
+        src="/logo/logo.svg"
+        alt={company.legalName}
+        width={998}
+        height={992}
+        priority={priority}
+        className={clsx("w-auto object-contain transition-all duration-300", finalSize)}
+      />
+    </span>
+  );
+}
+
 export function Mark({
-  className,
-  tone = "orange",
+  className = "h-9 w-9",
 }: {
   className?: string;
   tone?: "orange" | "white" | "charcoal";
 }) {
-  const color =
-    tone === "orange" ? "#F97316" : tone === "white" ? "#FFFFFF" : "#0B0D0F";
   return (
-    <svg
-      viewBox="0 0 100 100"
-      className={className}
-      fill="none"
-      aria-hidden="true"
-    >
-      <polyline
-        points="18,20 86,20 18,80 86,80"
-        stroke={color}
-        strokeWidth="7"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-      />
-      <line x1="52" y1="20" x2="52" y2="80" stroke={color} strokeWidth="7" strokeLinecap="square" />
-      <polyline
-        points="52,28 76,28 76,48"
-        stroke={color}
-        strokeWidth="7"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-      />
-      <polyline
-        points="76,52 76,72 52,72"
-        stroke={color}
-        strokeWidth="7"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-      />
-    </svg>
+    <Image
+      src="/logo/logo.svg"
+      alt={company.legalName}
+      width={100}
+      height={100}
+      className={clsx("w-auto object-contain", className)}
+    />
   );
 }
 
@@ -63,7 +62,7 @@ export function MarkBadge({
         border: dark ? "none" : "1px solid #E5E7EB",
       }}
     >
-      <Mark tone={dark ? "orange" : "charcoal"} className="h-full w-full p-[18%]" />
+      <Mark className="h-full w-full p-2" />
     </div>
   );
 }
@@ -92,23 +91,6 @@ export function Wordmark({
       >
         {company.tagline}
       </span>
-    </span>
-  );
-}
-
-export function Logo({
-  className = "",
-  tone = "dark",
-  markSize = "h-9 w-9",
-}: {
-  className?: string;
-  tone?: "dark" | "light";
-  markSize?: string;
-}) {
-  return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
-      <Mark tone={tone === "dark" ? "orange" : "white"} className={markSize} />
-      <Wordmark tone={tone} className="text-[15px] sm:text-[16px]" />
     </span>
   );
 }
