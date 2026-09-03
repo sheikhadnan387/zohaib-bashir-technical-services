@@ -36,7 +36,7 @@ const steps = [
 
 export function WorkProcess() {
   return (
-    <section className="bg-white py-20 sm:py-28 overflow-hidden">
+    <section className="bg-white py-14 sm:py-20 lg:py-28 overflow-hidden">
       <div className="container-edge">
         <SectionHeading
           eyebrow="How We Work"
@@ -53,7 +53,7 @@ export function WorkProcess() {
         {/* ========================================================================= */}
         {/* DESKTOP 4-COLUMN ALTERNATING RHYTHM (xl and above)                       */}
         {/* ========================================================================= */}
-        <div className="mt-16 hidden xl:grid xl:grid-cols-4 xl:gap-6 2xl:gap-8 items-start">
+        <div className="mt-12 sm:mt-16 hidden xl:grid xl:grid-cols-4 xl:gap-6 2xl:gap-8 items-start">
           {steps.map((step, i) => {
             const Icon = step.icon;
             // Even index (01, 03): Image top -> Badge -> Text bottom
@@ -136,7 +136,7 @@ export function WorkProcess() {
         {/* ========================================================================= */}
         {/* TABLET 2-COLUMN GRID (md to xl)                                           */}
         {/* ========================================================================= */}
-        <div className="mt-16 hidden md:grid md:grid-cols-2 gap-x-10 gap-y-14 xl:hidden">
+        <div className="mt-12 sm:mt-16 hidden md:grid md:grid-cols-2 gap-x-10 gap-y-12 xl:hidden">
           {steps.map((step, i) => {
             const Icon = step.icon;
 
@@ -146,7 +146,7 @@ export function WorkProcess() {
                 delay={i * 0.08}
                 className="group relative flex flex-col items-center"
               >
-                <div className="relative h-[260px] w-full overflow-hidden rounded-t-[999px] rounded-b-md bg-brand-bg shadow-sm">
+                <div className="relative h-[240px] w-full overflow-hidden rounded-t-[999px] rounded-b-md bg-brand-bg shadow-sm">
                   <Image
                     src={step.image}
                     alt={step.title}
@@ -156,9 +156,9 @@ export function WorkProcess() {
                   />
                 </div>
 
-                <div className="my-4 flex items-center justify-center relative z-10">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-black text-white shadow-sm transition-all duration-[350ms] ease-out group-hover:-translate-y-[2px] group-hover:scale-[1.06] group-hover:bg-brand-orange motion-reduce:transform-none">
-                    <span className="font-heading text-[13px] font-bold tracking-wider">
+                <div className="my-3.5 flex items-center justify-center relative z-10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-black text-white shadow-sm transition-all duration-[350ms] ease-out group-hover:-translate-y-[2px] group-hover:scale-[1.06] group-hover:bg-brand-orange motion-reduce:transform-none">
+                    <span className="font-heading text-[12.5px] font-bold tracking-wider">
                       {step.number}
                     </span>
                   </div>
@@ -166,14 +166,14 @@ export function WorkProcess() {
 
                 <div className="flex flex-col items-center text-center px-4">
                   <Icon
-                    className="h-6 w-6 text-brand-orange mb-2.5 transition-transform duration-300 ease-out group-hover:-translate-y-0.5"
+                    className="h-5 w-5 text-brand-orange mb-2 transition-transform duration-300 ease-out group-hover:-translate-y-0.5"
                     strokeWidth={1.5}
                     aria-hidden="true"
                   />
-                  <h3 className="font-heading text-[18px] font-bold leading-snug text-brand-black">
+                  <h3 className="font-heading text-[17px] font-bold leading-snug text-brand-black">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-brand-black/60 max-w-xs">
+                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-brand-black/60 max-w-xs">
                     {step.description}
                   </p>
                 </div>
@@ -185,24 +185,24 @@ export function WorkProcess() {
         {/* ========================================================================= */}
         {/* MOBILE VERTICAL SEQUENCE (under md)                                       */}
         {/* ========================================================================= */}
-        <div className="mt-14 flex flex-col gap-12 md:hidden">
+        <div className="mt-10 flex flex-col gap-9 md:hidden">
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
               <Reveal key={step.number} delay={i * 0.06} className="group relative flex flex-col items-center">
-                <div className="relative h-[250px] w-full max-w-xs overflow-hidden rounded-t-[999px] rounded-b-md bg-brand-bg shadow-sm">
+                <div className="relative h-[220px] w-full max-w-[280px] overflow-hidden rounded-t-[999px] rounded-b-md bg-brand-bg shadow-sm">
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 320px"
+                    sizes="(max-width: 768px) 100vw, 280px"
                     className="object-cover"
                   />
                 </div>
 
-                <div className="my-4 flex items-center justify-center relative z-10">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-black text-white shadow-sm transition-all duration-[350ms] ease-out group-hover:-translate-y-[2px] group-hover:scale-[1.06] group-hover:bg-brand-orange motion-reduce:transform-none">
-                    <span className="font-heading text-[13px] font-bold tracking-wider">
+                <div className="my-3 flex items-center justify-center relative z-10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-black text-white shadow-sm transition-all duration-[350ms] ease-out group-hover:-translate-y-[2px] group-hover:scale-[1.06] group-hover:bg-brand-orange motion-reduce:transform-none">
+                    <span className="font-heading text-[12.5px] font-bold tracking-wider">
                       {step.number}
                     </span>
                   </div>
@@ -210,14 +210,14 @@ export function WorkProcess() {
 
                 <div className="flex flex-col items-center text-center px-4 max-w-xs">
                   <Icon
-                    className="h-6 w-6 text-brand-orange mb-2"
+                    className="h-5 w-5 text-brand-orange mb-1.5"
                     strokeWidth={1.5}
                     aria-hidden="true"
                   />
-                  <h3 className="font-heading text-[18px] font-bold leading-snug text-brand-black">
+                  <h3 className="font-heading text-[16.5px] font-bold leading-snug text-brand-black">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-brand-black/60">
+                  <p className="mt-1.5 text-[13px] leading-relaxed text-brand-black/60">
                     {step.description}
                   </p>
                 </div>

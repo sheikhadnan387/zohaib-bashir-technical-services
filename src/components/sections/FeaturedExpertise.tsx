@@ -39,13 +39,13 @@ const featured = [
 
 export function FeaturedExpertise() {
   return (
-    <section className="bg-brand-bg py-4 sm:py-6">
+    <section className="bg-brand-bg py-2 sm:py-4">
       {featured.map((item, i) => {
         const reversed = i % 2 === 1;
         return (
-          <div key={item.href} className="container-edge py-14 sm:py-16">
+          <div key={item.href} className="container-edge py-8 sm:py-12 lg:py-16">
             <div
-              className={`grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+              className={`grid grid-cols-1 items-center gap-6 sm:gap-10 lg:grid-cols-2 lg:gap-16 ${
                 reversed ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
@@ -63,13 +63,13 @@ export function FeaturedExpertise() {
               </Reveal>
               <Reveal delay={0.12}>
                 <Eyebrow>{item.eyebrow}</Eyebrow>
-                <h3 className="mt-5 font-heading text-[30px] font-bold leading-[1.1] text-brand-black sm:text-[38px]">
+                <h3 className="mt-3.5 sm:mt-5 font-heading text-[22px] xs:text-[26px] sm:text-[32px] lg:text-[38px] font-bold leading-[1.12] text-brand-black break-words">
                   {item.title}
                 </h3>
-                <p className="mt-5 max-w-md text-[16px] leading-relaxed text-brand-muted">
+                <p className="mt-3 sm:mt-5 max-w-md text-[14px] sm:text-[16px] leading-relaxed text-brand-muted">
                   {item.description}
                 </p>
-                <div className="mt-7">
+                <div className="mt-5 sm:mt-7">
                   <Button href={item.href} variant="ghost" withArrow>
                     {item.cta}
                   </Button>

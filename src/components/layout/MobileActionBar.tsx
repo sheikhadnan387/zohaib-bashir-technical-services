@@ -4,10 +4,10 @@ import { company } from "@/lib/company";
 
 export function MobileActionBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t border-white/10 bg-brand-black/95 backdrop-blur-md lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t border-white/10 bg-brand-black/95 pb-[env(safe-area-inset-bottom,0px)] backdrop-blur-md lg:hidden">
       <a
         href={company.phoneHref}
-        className="focus-ring flex flex-col items-center justify-center gap-1 py-2.5 text-white/85 active:bg-white/5"
+        className="focus-ring flex flex-col items-center justify-center gap-1 py-2 text-white/85 active:bg-white/5"
       >
         <Phone className="h-[18px] w-[18px]" aria-hidden="true" />
         <span className="text-[10px] font-semibold uppercase tracking-[0.1em]">Call</span>

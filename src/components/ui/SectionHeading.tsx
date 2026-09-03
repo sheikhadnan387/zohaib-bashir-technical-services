@@ -41,13 +41,13 @@ export function SectionHeading({
   return (
     <div className={clsx(align === "center" && "text-center", className)}>
       {eyebrow && (
-        <Eyebrow tone={tone} className={clsx("mb-5", align === "center" && "justify-center")}>
+        <Eyebrow tone={tone} className={clsx("mb-3 sm:mb-5", align === "center" && "justify-center")}>
           {eyebrow}
         </Eyebrow>
       )}
       <h2
         className={clsx(
-          "font-heading text-[36px] font-bold leading-[1.05] sm:text-[44px] lg:text-[56px]",
+          "font-heading text-[26px] xs:text-[30px] sm:text-[40px] lg:text-[52px] font-bold leading-[1.08] break-words",
           tone === "dark" ? "text-brand-black" : "text-white"
         )}
       >
@@ -56,7 +56,7 @@ export function SectionHeading({
       {description && (
         <p
           className={clsx(
-            "mt-5 max-w-xl text-[16px] leading-relaxed sm:text-[18px]",
+            "mt-3 sm:mt-5 max-w-xl text-[14.5px] sm:text-[17px] leading-relaxed",
             tone === "dark" ? "text-brand-muted" : "text-white/65",
             align === "center" && "mx-auto"
           )}

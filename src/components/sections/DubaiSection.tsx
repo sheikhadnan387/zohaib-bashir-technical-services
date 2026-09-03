@@ -23,7 +23,7 @@ function SkylineMark({ className }: { className?: string }) {
 
 export function DubaiSection() {
   return (
-    <section className="relative overflow-hidden bg-brand-charcoal py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-brand-charcoal py-14 sm:py-20 lg:py-28">
       <div
         className="absolute inset-0"
         style={{
@@ -32,31 +32,31 @@ export function DubaiSection() {
           backgroundSize: "44px 44px",
         }}
       />
-      <div className="container-edge relative grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-10">
+      <div className="container-edge relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-10">
         <Reveal>
           <Eyebrow tone="light">Serving Dubai</Eyebrow>
-          <h2 className="mt-5 font-heading text-[34px] font-bold leading-[1.08] text-white sm:text-[44px] lg:text-[50px]">
+          <h2 className="mt-4 sm:mt-5 font-heading text-[26px] xs:text-[30px] sm:text-[40px] lg:text-[48px] font-bold leading-[1.08] text-white">
             Technical Services for
             <br />
             Modern Properties.
           </h2>
-          <p className="mt-6 max-w-md text-[16px] leading-relaxed text-white/60">
+          <p className="mt-4 sm:mt-6 max-w-md text-[14.5px] sm:text-[16px] leading-relaxed text-white/65">
             Zohaib Bashir Technical Services is based in Dubai Investment
             Park 1, Dubai, and provides technical installation, maintenance
             and property-related services to residential and commercial
             properties across the emirate.
           </p>
-          <p className="mt-4 max-w-md text-[14px] leading-relaxed text-white/45">
+          <p className="mt-3 sm:mt-4 max-w-md text-[13px] sm:text-[14px] leading-relaxed text-white/45">
             Licensed as a Sole Establishment under License No.{" "}
             {"1009851"}.
           </p>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="rounded-lg border border-white/10 bg-brand-black/40 p-8 sm:p-10">
-            <SkylineMark className="h-16 w-full text-brand-orange" />
-            <div className="mt-8 flex items-center gap-2 text-[13px] uppercase tracking-[0.16em] text-white/50">
-              <span className="h-px w-8 bg-brand-orange" />
+          <div className="rounded-lg border border-white/10 bg-brand-black/40 p-6 sm:p-10">
+            <SkylineMark className="h-12 sm:h-16 w-full text-brand-orange" />
+            <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[12px] sm:text-[13px] uppercase tracking-[0.16em] text-white/50">
+              <span className="h-px w-6 sm:w-8 bg-brand-orange" />
               Dubai, United Arab Emirates
             </div>
           </div>

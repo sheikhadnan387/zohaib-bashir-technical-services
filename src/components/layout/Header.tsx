@@ -137,11 +137,11 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="focus-ring flex h-10 w-10 items-center justify-center text-white lg:hidden"
-            aria-label="Open menu"
+            className="focus-ring flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white shadow-xs backdrop-blur-xs transition-colors hover:border-brand-orange hover:bg-brand-orange active:scale-95 lg:hidden"
+            aria-label="Open navigation menu"
             aria-expanded={mobileOpen}
           >
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-5 w-5 text-white" strokeWidth={2.25} aria-hidden="true" />
           </button>
         </div>
       </header>

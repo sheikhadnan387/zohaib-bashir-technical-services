@@ -13,6 +13,11 @@ export interface Service {
   category: ProjectCategory;
   icon: string;
   image: string;
+  bannerImage: string;
+  bannerAlt: string;
+  detailImage: string;
+  detailImageAlt: string;
+  detailCaption: string;
   shortDescription: string;
   heroTagline: string;
   intro: string;
@@ -35,6 +40,11 @@ export const services: Service[] = [
     category: "Cleaning",
     icon: "Sparkles",
     image: "/images/services/shampoo-cleaning.webp",
+    bannerImage: "/images/services/shampoo-cleaning.webp",
+    bannerAlt: "Professional sofa, carpet, mattress, and curtain deep cleaning in a modern Dubai home",
+    detailImage: "/images/home/featured-cleaning.webp",
+    detailImageAlt: "Specialized deep extraction shampoo machine lifting stains and allergens from sofa upholstery",
+    detailCaption: "Deep Extraction & Fiber Sanitization",
     shortDescription:
       "Professional shampoo and deep cleaning for sofas, carpets, mattresses and curtains in residential and commercial properties.",
     heroTagline: "Deep cleaning that brings fabrics back to life.",
@@ -72,6 +82,11 @@ export const services: Service[] = [
     category: "Painting",
     icon: "Paintbrush",
     image: "/images/services/painting-work.webp",
+    bannerImage: "/images/services/painting-work.webp",
+    bannerAlt: "Professional painter applying smooth interior wall paint in a luxury Dubai apartment",
+    detailImage: "/images/projects/project-painting.webp",
+    detailImageAlt: "Completed interior painting project with pristine wall finishes overlooking Dubai Marina",
+    detailCaption: "Flawless Surface Preparation & Finishing",
     shortDescription:
       "Interior and exterior painting services for residential and commercial properties.",
     heroTagline: "A precise finish, from prep to final coat.",
@@ -109,6 +124,11 @@ export const services: Service[] = [
     category: "AC",
     icon: "Wind",
     image: "/images/services/ac-services.webp",
+    bannerImage: "/images/services/ac-services.webp",
+    bannerAlt: "Professional HVAC technician installing and maintaining a split air conditioner in Dubai",
+    detailImage: "/images/home/featured-ac.webp",
+    detailImageAlt: "HVAC technician performing digital diagnostic pressure and electrical check on AC unit",
+    detailCaption: "Diagnostics & Efficiency Optimization",
     shortDescription:
       "Air-conditioning installation, servicing and maintenance for residential and commercial properties.",
     heroTagline: "Reliable cooling engineered for Dubai's climate.",
@@ -146,6 +166,11 @@ export const services: Service[] = [
     category: "Flooring",
     icon: "Hammer",
     image: "/images/services/flooring-parquet.webp",
+    bannerImage: "/images/services/flooring-parquet.webp",
+    bannerAlt: "Professional flooring specialist installing premium wooden parquet flooring in Dubai",
+    detailImage: "/images/home/featured-flooring.webp",
+    detailImageAlt: "Precision alignment and mallet installation of herringbone parquet wood blocks",
+    detailCaption: "Precision Subfloor Prep & Parquet Craftsmanship",
     shortDescription:
       "Wood, parquet and laminate flooring installation and repair for residential and commercial properties.",
     heroTagline: "Precision flooring from preparation to finishing.",

@@ -8,9 +8,9 @@ const tallIndices = new Set([1, 3]);
 
 export function ServicesShowcase() {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-14 sm:py-20 lg:py-28">
       <div className="container-edge">
-        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+        <div className="flex flex-col items-start justify-between gap-6 sm:gap-8 lg:flex-row lg:items-end">
           <SectionHeading
             eyebrow="What We Do"
             title={
@@ -28,7 +28,7 @@ export function ServicesShowcase() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:auto-rows-[220px] lg:grid-cols-3 lg:[grid-auto-flow:dense]">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:auto-rows-[220px] lg:grid-cols-3 lg:[grid-auto-flow:dense]">
           {services.map((service, i) => (
             <Reveal
               key={service.slug}
