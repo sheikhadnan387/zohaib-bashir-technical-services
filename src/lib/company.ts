@@ -20,6 +20,20 @@ export const company = {
   geo: { latitude: 24.985, longitude: 55.17 },
 } as const;
 
+/**
+ * Client-confirmed proof points for the "Why Choose Us" section.
+ * Each renders only when set. See CLIENT-QUESTIONNAIRE.md — do not guess these.
+ */
+export const proofPoints: {
+  responseTime: string | null; // e.g. "WhatsApp replies within 30 minutes, 8am–8pm"
+  guarantee: string | null; // e.g. "Workmanship guaranteed for 12 months"
+  established: string | null; // e.g. "Serving Dubai since 2018"
+} = {
+  responseTime: null,
+  guarantee: null,
+  established: null,
+};
+
 // Areas shown in the "Serving Dubai" section — confirm with the client.
 export const serviceAreas = [
   "Dubai Investment Park",
