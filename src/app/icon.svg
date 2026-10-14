@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Zohaib Bashir Technical Services">
   <rect width="512" height="512" rx="112" fill="#0B0D0F"/>
   <!-- Chimney, sitting on the left roof slope -->
-  <rect x="150" y="196" width="48" height="96" fill="#FE7A13"/>
+  <rect x="150" y="166" width="48" height="96" fill="#FE7A13"/>
   <!-- Roof gable -->
-  <path d="M92 356 L256 192 L420 356" fill="none" stroke="#FE7A13" stroke-width="54" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M92 326 L256 162 L420 326" fill="none" stroke="#FE7A13" stroke-width="54" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Baseline bar echoing the wordmark rule -->
+  <rect x="168" y="364" width="176" height="24" rx="4" fill="#FFFFFF"/>
 </svg>
