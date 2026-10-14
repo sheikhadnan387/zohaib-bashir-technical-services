@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Phone, Mail, MapPin, MessageCircle, ExternalLink } from "lucide-react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { company } from "@/lib/company";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
-import { PageHeader } from "@/components/sections/PageHeader";
+import { ContactHeader } from "@/components/sections/ContactHeader";
 import { QuoteForm } from "@/components/ui/QuoteForm";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -32,45 +32,14 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(breadcrumbItems)) }}
       />
 
-      <PageHeader
-        breadcrumbItems={breadcrumbItems}
-        eyebrow="Contact Us"
-        title="Talk to Our Team"
-        description="Reach us directly, or send through your project details and we'll get back to you."
-        image="/images/pages/contact-hero.webp"
-        imageAlt="Contact Zohaib Bashir Technical Services team in Dubai"
-      />
+      <ContactHeader breadcrumbItems={breadcrumbItems} />
 
       <section className="bg-white py-16 sm:py-24">
         <div className="container-edge grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <Eyebrow>Contact Details</Eyebrow>
+            <Eyebrow>Visit Our Office</Eyebrow>
 
             <div className="mt-8 space-y-6">
-              <a href={company.phoneHref} className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
-                <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">Phone</p>
-                  <p className="mt-1 text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.phoneDisplay}</p>
-                </div>
-              </a>
-
-              <a href={company.whatsappHref} target="_blank" rel="noopener noreferrer" className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
-                <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">WhatsApp</p>
-                  <p className="mt-1 text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.phoneDisplay}</p>
-                </div>
-              </a>
-
-              <a href={company.emailHref} className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
-                <Mail className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">Email</p>
-                  <p className="mt-1 break-all text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.email}</p>
-                </div>
-              </a>
-
               <div className="flex items-start gap-4 rounded-lg border border-brand-black/10 p-5">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
                 <div>
