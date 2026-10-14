@@ -40,3 +40,12 @@ To change the recipient, edit `QUOTE_TO`, then `npm run package` and re-upload `
 - **Never delete `googlec6943ba2c1b5dd7b.html` from `public_html`** — removing it un-verifies the property.
   It lives in `public/`, so every `npm run package` re-includes it.
 - Add the business owner as a second owner: Search Console → Settings → Users and permissions → Add user (Owner).
+
+## Professional email (set up 14 Oct 2026)
+- `info@`, `sales@`, `quotes@` @zohaibbashirtechnicalservices.com are **cPanel forwarders** (cPanel → Email → Forwarders) to
+  `Raiswaris777@gmail.com`. They receive only — there is no mailbox, so mail can't be *sent from* them yet.
+- To also send from `info@`: create a mailbox in cPanel → Email Accounts (this needs a password, set by the owner),
+  **delete the `info@` forwarder first** (a forwarder overrides a mailbox of the same name), then add it to Gmail
+  via Settings → Accounts → Send mail as.
+- The Namecheap "Private Email" trial (expires 13 Nov 2026) is unused and can be ignored.
+- Quote form still delivers to Gmail directly (`QUOTE_TO` in `public/api/quote.php`).

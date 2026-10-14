@@ -8,8 +8,9 @@ export const company = {
   phoneE164: "+971588170040",
   phoneHref: "tel:+971588170040",
   whatsappHref: "https://wa.me/971588170040",
-  email: "Raiswaris777@gmail.com",
-  emailHref: "mailto:Raiswaris777@gmail.com",
+  // Forwards to the business Gmail (cPanel forwarder). Also forwarded: sales@, quotes@.
+  email: "info@zohaibbashirtechnicalservices.com",
+  emailHref: "mailto:info@zohaibbashirtechnicalservices.com",
   officeLine1: "Dubai Investment Park 1",
   officeLine2: "Dubai, United Arab Emirates",
   city: "Dubai",

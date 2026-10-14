@@ -64,7 +64,7 @@ Dubai Investment Park · Jumeirah Village Circle · Dubai Marina · Business Bay
 → `googleReviewsUrl` in `src/lib/reviews.ts`. If none exists, set one up first — it's the highest-value marketing step for a Dubai trade business.
 
 ## 8. Business email
-*A domain email for enquiries (e.g. info@zohaibbashirtechnicalservices.com) instead of the personal Gmail currently shown.*
+*DONE 14 Oct 2026 — `info@`, `sales@` and `quotes@` at zohaibbashirtechnicalservices.com are cPanel forwarders to Raiswaris777@gmail.com; the site now shows info@. (Optional later: create a real mailbox so replies can be sent FROM info@.)*
 
 > Answer:
 
