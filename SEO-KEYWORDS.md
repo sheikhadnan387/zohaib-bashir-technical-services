@@ -126,7 +126,7 @@ Lowest competition of the four services — realistic to rank organically first.
 ## Implemented (14 Oct 2026)
 
 - Services renamed with 308 redirects from every old URL (see `next.config.ts`): Sofa & Carpet Cleaning, Painting Services, AC Repair & Maintenance, Parquet & Wooden Flooring.
-- Four new sub-service pages: AC Duct Cleaning, AC Cleaning (under AC Repair & Maintenance); Curtain Cleaning, Mattress Cleaning (under Sofa & Carpet Cleaning). Each has its own title, intro, checklist and FAQ; all added to the sitemap.
+- Six sub-service pages: AC Duct Cleaning, AC Cleaning, AC Installation (under AC Repair & Maintenance); Curtain Cleaning, Mattress Cleaning (under Sofa & Carpet Cleaning); Vinyl Flooring (under Parquet & Wooden Flooring). Each has its own title, intro, checklist and FAQ; all added to the sitemap.
 - Titles kept to ~60 characters with the keyword first. Homepage H1 now reads "Technical Services in Dubai."
 - LocalBusiness schema lists every service in an `OfferCatalog`.
 - Copy only restates work the site already described — **no prices, guarantees or turnaround claims** until the client confirms them.

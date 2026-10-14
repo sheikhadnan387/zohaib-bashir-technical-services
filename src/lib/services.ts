@@ -172,13 +172,14 @@ export const services: Service[] = [
     detailImageAlt: "Installer pressing an oak herringbone parquet block into fresh adhesive",
     detailCaption: "Precision Subfloor Prep & Parquet Craftsmanship",
     shortDescription:
-      "Parquet, wooden and laminate flooring installation, repair and refinishing for homes and commercial properties in Dubai.",
+      "Parquet, wooden, vinyl and laminate flooring installation, repair and refinishing for homes and commercial properties in Dubai.",
     heroTagline: "Precision flooring from preparation to finishing.",
     intro:
-      "Quality flooring transforms a space. We install and maintain parquet, wooden and laminate flooring in Dubai with careful attention to substrate preparation, material selection and precision installation. From new installations to repairs and refinishing, our work is built to last.",
+      "Quality flooring transforms a space. We install and maintain parquet, wooden, vinyl and laminate flooring in Dubai with careful attention to substrate preparation, material selection and precision installation. From new installations to repairs and refinishing, our work is built to last.",
     whatWeDo: [
       "Wood flooring installation",
       "Parquet flooring installation and pattern work",
+      "Vinyl flooring installation",
       "Laminate flooring installation",
       "Subfloor preparation and leveling",
       "Flooring repair and replacement",
@@ -197,8 +198,8 @@ export const services: Service[] = [
     relatedSlugs: ["painting-services", "ac-repair-maintenance"],
     seoTitle: "Parquet & Wooden Flooring Dubai | Installation",
     seoDescription:
-      "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood and laminate floors for villas, apartments and offices. Request a quote.",
-    keywords: ["flooring Dubai", "parquet flooring Dubai", "wooden flooring Dubai", "laminate flooring Dubai", "flooring company Dubai", "floor polishing Dubai"],
+      "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood, vinyl and laminate floors for villas, apartments and offices. Request a quote.",
+    keywords: ["flooring Dubai", "parquet flooring Dubai", "wooden flooring Dubai", "vinyl flooring Dubai", "laminate flooring Dubai", "flooring company Dubai", "floor polishing Dubai"],
   },
 ];
 

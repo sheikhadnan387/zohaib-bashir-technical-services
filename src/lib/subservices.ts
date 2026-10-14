@@ -191,6 +191,90 @@ export const subServices: SubService[] = [
       "Mattress cleaning in Dubai — shampoo cleaning and sanitization to remove stains, odours and allergens in homes, apartments and hotels. Request a quote.",
     keywords: ["mattress cleaning Dubai", "mattress shampoo cleaning Dubai", "mattress sanitization Dubai", "sofa cleaning Dubai"],
   },
+  {
+    slug: "ac-installation",
+    parentSlug: "ac-repair-maintenance",
+    name: "AC Installation in Dubai",
+    shortName: "AC Installation",
+    blurb: "New and replacement AC installation for villas, apartments and commercial units.",
+    heroTagline: "Installed properly, cooling from day one.",
+    intro:
+      "A good air conditioner still performs badly if it is installed badly. Our AC installation service in Dubai covers new installations and replacements for villas, apartments, offices and commercial units — from advising on unit placement to fitting, testing and handing over a system that cools efficiently.",
+    whatWeDo: [
+      "Site assessment and unit placement advice",
+      "Installation of new AC units",
+      "Replacement of existing units",
+      "Secure mounting of indoor and outdoor units",
+      "Testing and performance check after installation",
+      "Handover and guidance on using and maintaining the unit",
+    ],
+    approach:
+      "Installation quality shapes how well and how long an AC runs, so we start with the site: where the units will sit, how the space is used and what the property needs. Every installation is tested before handover.",
+    faqs: [
+      {
+        q: "Do you install AC units for new and existing properties?",
+        a: "Yes. We install units in new properties and replace or add units in existing ones, in villas, apartments, offices and commercial spaces.",
+      },
+      {
+        q: "Can you advise on which unit and where to place it?",
+        a: "Yes. We review the space and the requirement, and advise on placement. Tell us the room size and how you use it when you request a quote.",
+      },
+      {
+        q: "Do you also maintain the AC after installation?",
+        a: "Yes. We provide routine AC servicing, cleaning and repair, so the same team can look after the system after it is installed.",
+      },
+      {
+        q: "How do I get a quote?",
+        a: "Call, WhatsApp or use the quote form. We review the requirement, visit the site where needed, and send a clear scope and quotation before any work starts.",
+      },
+    ],
+    seoTitle: "AC Installation Dubai | Split AC Installation",
+    seoDescription:
+      "AC installation in Dubai — new and replacement AC installation for villas, apartments and offices, with site advice and testing before handover. Request a quote.",
+    keywords: ["AC installation Dubai", "split AC installation Dubai", "AC replacement Dubai", "new AC installation Dubai", "AC repair Dubai"],
+  },
+  {
+    slug: "vinyl-flooring",
+    parentSlug: "parquet-wooden-flooring",
+    name: "Vinyl Flooring in Dubai",
+    shortName: "Vinyl Flooring",
+    blurb: "Vinyl flooring installation with proper subfloor preparation for homes and offices.",
+    heroTagline: "Durable vinyl floors, installed flat and clean.",
+    intro:
+      "Vinyl flooring is a practical, hard-wearing choice for homes, offices and retail spaces, and it is easy to keep clean. Our vinyl flooring service in Dubai covers measuring, subfloor preparation and installation, so the finished floor is level, tight at the joints and neat at the edges.",
+    whatWeDo: [
+      "Site measurement and material planning",
+      "Subfloor preparation and levelling",
+      "Vinyl flooring installation",
+      "Skirting, transitions and finishing details",
+      "Replacement of existing flooring",
+      "Repair of damaged vinyl sections",
+    ],
+    approach:
+      "A vinyl floor only looks as good as the surface under it, so we measure the site and correct the subfloor first. Then we install with attention to joints, edges and transitions so the result is level and clean.",
+    faqs: [
+      {
+        q: "Do you install vinyl flooring in apartments, villas and offices?",
+        a: "Yes. We install flooring in residential apartments and villas as well as offices, retail spaces and other commercial interiors.",
+      },
+      {
+        q: "Does the subfloor need to be prepared?",
+        a: "Usually, yes. Vinyl shows imperfections in the surface beneath it, so we assess the subfloor and level or repair it before installing.",
+      },
+      {
+        q: "Can you also install parquet, wooden or laminate flooring?",
+        a: "Yes. Alongside vinyl we install parquet, wooden and laminate flooring, and can help you compare them for your space.",
+      },
+      {
+        q: "How do I get a quote?",
+        a: "Call, WhatsApp or use the quote form with the area and the type of space. We'll measure where needed and send a clear quotation before any work starts.",
+      },
+    ],
+    seoTitle: "Vinyl Flooring Dubai | Installation",
+    seoDescription:
+      "Vinyl flooring in Dubai — measuring, subfloor preparation and installation for villas, apartments and offices. Durable, easy-to-clean floors. Request a quote.",
+    keywords: ["vinyl flooring Dubai", "vinyl flooring installation Dubai", "vinyl floor Dubai", "flooring Dubai", "flooring company Dubai"],
+  },
 ];
 
 export function getSubService(parentSlug: string, slug: string): SubService | undefined {
