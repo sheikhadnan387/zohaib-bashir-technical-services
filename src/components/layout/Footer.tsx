@@ -104,13 +104,21 @@ export function Footer() {
           <p>
             © {year} {company.legalName}. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-5 sm:gap-6 lg:mr-16">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 sm:gap-x-6 lg:mr-16">
             <Link href="/privacy-policy" className="focus-ring inline-block py-2 hover:text-brand-orange">
               Privacy Policy
             </Link>
             <Link href="/terms" className="focus-ring inline-block py-2 hover:text-brand-orange">
               Terms &amp; Conditions
             </Link>
+            <a
+              href="https://codeles.codes/"
+              target="_blank"
+              rel="noopener"
+              className="focus-ring inline-block py-2 hover:text-brand-orange"
+            >
+              Designed by <span className="font-semibold text-white/80">Codeles</span>
+            </a>
           </div>
         </div>
       </div>
