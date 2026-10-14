@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronDown, Phone } from "lucide-react";
@@ -10,11 +10,54 @@ import { services } from "@/lib/services";
 
 export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [servicesOpen, setServicesOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  // Lock page scroll, close on Escape, and keep Tab focus inside the dialog while open.
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    document.body.style.overflow = "hidden";
+
+    const focusables = () =>
+      Array.from(
+        panelRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ) ?? []
+      );
+    focusables()[0]?.focus();
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+      previouslyFocused?.focus();
+    };
+  }, [open, onClose]);
 
   return (
     <AnimatePresence>
       {open && (
         <motion.div
+          ref={panelRef}
           className="fixed inset-0 z-[60] flex flex-col bg-brand-black lg:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -83,7 +126,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
                             key={s.slug}
                             href={`/services/${s.slug}`}
                             onClick={onClose}
-                            className="focus-ring py-2 text-[15px] text-white/75"
+                            className="focus-ring py-2 text-[16px] text-white/75"
                           >
                             {s.shortName}
                           </Link>
@@ -114,7 +157,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="focus-ring flex items-center justify-center rounded-[6px] bg-brand-orange px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white"
+                className="focus-ring flex items-center justify-center rounded-[6px] bg-brand-orange px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-black"
               >
                 Request a Quote
               </Link>

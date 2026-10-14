@@ -60,7 +60,7 @@ export default function AboutPage() {
               services provider, operating as a Sole Establishment under
               License No. {company.licenseNo}.
             </p>
-            <p className="mt-5 text-[15.5px] leading-relaxed text-brand-muted">
+            <p className="mt-5 text-[16.5px] leading-relaxed text-brand-muted">
               Based at Dubai Investment Park 1, the company provides
               shampoo cleaning, painting, AC services and flooring work
               to residential and commercial properties across Dubai, with
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 <br />
                 Offerings.
               </h2>
-              <p className="mt-5 max-w-sm text-[14.5px] leading-relaxed text-brand-muted">
+              <p className="mt-5 max-w-sm text-[15.5px] leading-relaxed text-brand-muted">
                 Each service is delivered with the same standard of
                 preparation, execution and attention to detail.
               </p>
@@ -101,8 +101,8 @@ export default function AboutPage() {
                           <span className="font-heading text-[13px] font-bold text-brand-orange">
                             {service.number}
                           </span>
-                          <Icon className="h-5 w-5 shrink-0 text-brand-black/40" strokeWidth={1.5} aria-hidden="true" />
-                          <span className="flex-1 text-[15px] font-medium text-brand-black/85 group-hover:text-brand-orange sm:text-[16px]">
+                          <Icon className="h-5 w-5 shrink-0 text-brand-black/55" strokeWidth={1.5} aria-hidden="true" />
+                          <span className="flex-1 text-[16px] font-medium text-brand-black/85 group-hover:text-brand-orange sm:text-[16px]">
                             {service.shortName}
                           </span>
                           <ArrowUpRight className="h-4 w-4 text-brand-black/30 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-orange" aria-hidden="true" />
@@ -154,8 +154,8 @@ export default function AboutPage() {
             <p className="text-[17px] leading-relaxed text-white/70 sm:text-[19px]">
               Our office is based at {company.officeLine1}, {company.officeLine2}.
               From here, we serve residential and commercial properties
-              across Dubai, coordinating technical work across all nine
-              service disciplines.
+              across Dubai, coordinating technical work across all four
+              service areas.
             </p>
           </Reveal>
         </div>
@@ -171,11 +171,11 @@ export default function AboutPage() {
               return (
                 <Reveal key={item.label}>
                   <div className="border-t border-brand-black/10 pt-5">
-                    <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/40">
+                    <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">
                       <Icon className="h-3.5 w-3.5 text-brand-orange" aria-hidden="true" />
                       {item.label}
                     </div>
-                    <p className="mt-2 break-words text-[15px] font-medium text-brand-black">
+                    <p className="mt-2 break-words text-[16px] font-medium text-brand-black">
                       {item.value}
                     </p>
                   </div>

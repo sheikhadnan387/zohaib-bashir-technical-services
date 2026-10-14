@@ -65,14 +65,14 @@ export function ProjectsGrid() {
         ))}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {filtered.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
       {filtered.length === 0 && (
-        <p className="mt-10 text-[14px] text-brand-muted">No projects in this category yet.</p>
+        <p className="mt-10 text-[15px] text-brand-muted">No projects in this category yet.</p>
       )}
     </div>
   );

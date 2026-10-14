@@ -1,10 +1,11 @@
-import { MapPin } from "lucide-react";
+import { FileBadge2, Building2, Phone } from "lucide-react";
+import { company } from "@/lib/company";
 import { Button } from "@/components/ui/Button";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 export function Hero() {
   return (
-    <section className="relative h-[calc(100svh-84px)] min-h-[480px] max-h-[700px] sm:max-h-none sm:min-h-[580px] lg:min-h-[640px] w-full overflow-hidden bg-brand-black">
+    <section className="relative h-[calc(100svh-var(--header-h))] min-h-[480px] max-h-[700px] sm:max-h-none sm:min-h-[580px] lg:min-h-[640px] w-full overflow-hidden bg-brand-black">
       {/* Background Video */}
       <video
         autoPlay
@@ -42,7 +43,7 @@ export function Hero() {
           </RevealItem>
 
           <RevealItem>
-            <p className="mt-3 sm:mt-5 max-w-lg text-[14px] sm:text-[16.5px] lg:text-[18px] leading-relaxed text-white/75">
+            <p className="mt-3 sm:mt-5 max-w-lg text-[15px] sm:text-[16.5px] lg:text-[18px] leading-relaxed text-white/75">
               Professional installation, maintenance and technical services
               for residential and commercial properties across Dubai.
             </p>
@@ -60,10 +61,22 @@ export function Hero() {
           </RevealItem>
 
           <RevealItem>
-            <div className="mt-6 sm:mt-9 flex items-center gap-2 text-[12px] sm:text-[13px] text-white/50">
-              <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-orange" aria-hidden="true" />
-              Dubai, United Arab Emirates
-            </div>
+            <ul className="mt-7 sm:mt-10 flex flex-wrap gap-x-6 gap-y-2.5 border-t border-white/15 pt-5 text-[13px] sm:text-[13.5px] text-white/80">
+              <li className="flex items-center gap-2">
+                <FileBadge2 className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                Licensed · No. {company.licenseNo}
+              </li>
+              <li className="flex items-center gap-2">
+                <Building2 className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                Residential &amp; commercial, all Dubai
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                <a href={company.phoneHref} className="focus-ring hover:text-white">
+                  {company.phoneDisplay}
+                </a>
+              </li>
+            </ul>
           </RevealItem>
         </RevealGroup>
       </div>

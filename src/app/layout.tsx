@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { MobileActionBar } from "@/components/layout/MobileActionBar";
-import { SiteLoader } from "@/components/ui/SiteLoader";
 import { company } from "@/lib/company";
 import { localBusinessSchema } from "@/lib/seo";
 
@@ -70,7 +69,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
       <body className="antialiased">
-        <SiteLoader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
@@ -82,7 +80,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Header />
-        <main id="main-content" className="pt-[84px]">
+        <main id="main-content" className="pt-[var(--header-h)]">
           {children}
         </main>
         <Footer />

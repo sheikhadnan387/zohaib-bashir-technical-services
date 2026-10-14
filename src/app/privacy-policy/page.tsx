@@ -21,11 +21,11 @@ export default function PrivacyPolicyPage() {
 
       <section className="bg-white py-16 sm:py-24">
         <div className="container-edge max-w-3xl space-y-10">
-          <p className="text-[14px] text-brand-muted">Last updated: {new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
+          <p className="text-[15px] text-brand-muted">Last updated: {new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</p>
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">1. Introduction</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               {company.legalName} (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) respects your privacy.
               This Privacy Policy explains what information we collect through
               this website, how we use it, and the choices you have.
@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">2. Information We Collect</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               When you submit a quote request or contact form, we collect the
               information you provide directly — such as your name, phone
               number, email address, property location and project details.
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">3. How We Use Your Information</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               Information submitted through this website is used solely to
               respond to your enquiry, prepare a quotation and coordinate any
               requested service. We do not sell or rent your personal
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">4. Contact Methods</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               Submitting the quote form on this website opens a pre-filled
               email or WhatsApp message on your own device, addressed to us.
               We receive only what you choose to send.
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">5. Data Retention</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               We retain enquiry information only for as long as necessary to
               respond to your request and, where applicable, deliver the
               service requested.
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">6. Your Rights</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               You may request access to, correction of, or deletion of
               personal information you have submitted to us by contacting us
               using the details below.
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           <div>
             <h2 className="font-heading text-[22px] font-bold text-brand-black">7. Contact Us</h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-brand-black/70">
+            <p className="mt-3 text-[16px] leading-relaxed text-brand-black/70">
               For any questions about this Privacy Policy, contact us at{" "}
               <a href={company.emailHref} className="text-brand-orange hover:underline">
                 {company.email}

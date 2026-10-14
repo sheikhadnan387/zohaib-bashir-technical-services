@@ -36,23 +36,18 @@ export function PageHeader({
             />
 
             {/* Readability Overlays */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/45 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-black/65 to-brand-black/20" />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black/65 via-brand-black/25 to-transparent" />
 
             {/* Bottom-Left Aligned Content */}
             <div className="relative z-10 flex h-full flex-col justify-end p-5 sm:p-10 lg:p-14">
               <Reveal>
                 <Breadcrumb items={breadcrumbItems} tone="light" />
-                {eyebrow && (
-                  <Eyebrow tone="light" className="mt-3 sm:mt-3.5 mb-1.5 sm:mb-3">
-                    {eyebrow}
-                  </Eyebrow>
-                )}
-                <h1 className="mt-2 font-heading text-[24px] xs:text-[28px] sm:text-[38px] md:text-[44px] lg:text-[52px] font-bold leading-[1.06] text-white break-words">
+                <h1 className="mt-4 font-heading text-[30px] xs:text-[34px] sm:text-[44px] md:text-[52px] lg:text-[60px] font-bold leading-[1.04] text-white break-words">
                   {title}
                 </h1>
                 {description && (
-                  <p className="mt-2 sm:mt-3.5 max-w-xl text-[13px] sm:text-[15.5px] leading-relaxed text-white/80 line-clamp-3 sm:line-clamp-none">
+                  <p className="mt-2 sm:mt-3.5 max-w-xl text-[16px] sm:text-[17px] leading-relaxed text-white/90 line-clamp-3 sm:line-clamp-none">
                     {description}
                   </p>
                 )}
@@ -83,7 +78,7 @@ export function PageHeader({
             {title}
           </h1>
           {description && (
-            <p className="mt-4 sm:mt-5 max-w-xl text-[14.5px] sm:text-[17px] leading-relaxed text-white/60">
+            <p className="mt-4 sm:mt-5 max-w-xl text-[15.5px] sm:text-[17px] leading-relaxed text-white/70">
               {description}
             </p>
           )}

@@ -14,13 +14,13 @@ export default function NotFound() {
       />
       <div className="container-edge relative py-24 text-center">
         <Compass className="mx-auto h-10 w-10 text-brand-orange" strokeWidth={1.25} aria-hidden="true" />
-        <p className="mt-6 font-heading text-[15px] font-bold uppercase tracking-[0.2em] text-brand-orange">
+        <p className="mt-6 font-heading text-[16px] font-bold uppercase tracking-[0.2em] text-brand-orange">
           404
         </p>
         <h1 className="mt-4 font-heading text-[36px] font-bold text-white sm:text-[48px]">
           Page Not Found
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-[15.5px] leading-relaxed text-white/60">
+        <p className="mx-auto mt-4 max-w-md text-[16.5px] leading-relaxed text-white/70">
           The page you&rsquo;re looking for doesn&rsquo;t exist or may have
           been moved.
         </p>

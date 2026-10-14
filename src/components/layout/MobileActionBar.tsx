@@ -23,7 +23,7 @@ export function MobileActionBar() {
       </a>
       <Link
         href="/contact"
-        className="focus-ring flex flex-col items-center justify-center gap-1 bg-brand-orange py-2.5 text-white active:bg-brand-orange-deep"
+        className="focus-ring flex flex-col items-center justify-center gap-1 bg-brand-orange py-2.5 text-brand-black active:bg-brand-orange-accent"
       >
         <FileText className="h-[18px] w-[18px]" aria-hidden="true" />
         <span className="text-[10px] font-semibold uppercase tracking-[0.1em]">Quote</span>

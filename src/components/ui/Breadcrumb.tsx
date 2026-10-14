@@ -24,7 +24,7 @@ export function Breadcrumb({
               {isLast ? (
                 <span
                   aria-current="page"
-                  className={tone === "dark" ? "text-brand-black/60" : "text-white/60"}
+                  className={tone === "dark" ? "text-brand-black/60" : "text-white/70"}
                 >
                   {item.name}
                 </span>
@@ -34,7 +34,7 @@ export function Breadcrumb({
                   className={
                     tone === "dark"
                       ? "text-brand-black/60 hover:text-brand-orange"
-                      : "text-white/60 hover:text-brand-orange"
+                      : "text-white/70 hover:text-brand-orange"
                   }
                 >
                   {item.name}

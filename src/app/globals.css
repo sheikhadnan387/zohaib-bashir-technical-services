@@ -4,6 +4,7 @@
   --color-orange: #f97316;
   --color-orange-deep: #ea580c;
   --color-orange-accent: #ff8a1f;
+  --color-orange-text: #c2410c; /* orange for text on light backgrounds (≥4.5:1) */
   --color-near-black: #0b0d0f;
   --color-charcoal: #15191d;
   --color-dark-gray: #242a30;
@@ -20,6 +21,7 @@
   --color-brand-orange: var(--color-orange);
   --color-brand-orange-deep: var(--color-orange-deep);
   --color-brand-orange-accent: var(--color-orange-accent);
+  --color-brand-orange-text: var(--color-orange-text);
   --color-brand-black: var(--color-near-black);
   --color-brand-charcoal: var(--color-charcoal);
   --color-brand-gray: var(--color-dark-gray);
@@ -104,6 +106,15 @@ h6 {
   outline: 2px solid var(--color-orange);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+:root {
+  --header-h: 72px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --header-h: 84px;
+  }
 }
 
 @media (max-width: 1023px) {

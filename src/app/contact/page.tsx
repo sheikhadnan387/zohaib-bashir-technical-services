@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Phone, Mail, MapPin, MessageCircle, ExternalLink } from "lucide-react";
 import { company } from "@/lib/company";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
@@ -49,7 +50,7 @@ export default function ContactPage() {
               <a href={company.phoneHref} className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
                 <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/40">Phone</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">Phone</p>
                   <p className="mt-1 text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.phoneDisplay}</p>
                 </div>
               </a>
@@ -57,7 +58,7 @@ export default function ContactPage() {
               <a href={company.whatsappHref} target="_blank" rel="noopener noreferrer" className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
                 <MessageCircle className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/40">WhatsApp</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">WhatsApp</p>
                   <p className="mt-1 text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.phoneDisplay}</p>
                 </div>
               </a>
@@ -65,7 +66,7 @@ export default function ContactPage() {
               <a href={company.emailHref} className="focus-ring group flex items-start gap-4 rounded-lg border border-brand-black/10 p-5 transition-colors hover:border-brand-orange">
                 <Mail className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/40">Email</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">Email</p>
                   <p className="mt-1 break-all text-[17px] font-semibold text-brand-black group-hover:text-brand-orange">{company.email}</p>
                 </div>
               </a>
@@ -73,7 +74,7 @@ export default function ContactPage() {
               <div className="flex items-start gap-4 rounded-lg border border-brand-black/10 p-5">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" aria-hidden="true" />
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/40">Office</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">Office</p>
                   <p className="mt-1 text-[17px] font-semibold text-brand-black">
                     {company.officeLine1}
                     <br />
@@ -101,7 +102,7 @@ export default function ContactPage() {
                 <span className="text-[13px] font-medium text-white/70">
                   {company.officeLine1}, {company.officeLine2}
                 </span>
-                <span className="inline-flex shrink-0 items-center gap-1.5 rounded-[6px] bg-brand-orange px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-white">
+                <span className="inline-flex shrink-0 items-center gap-1.5 rounded-[6px] bg-brand-orange px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-black">
                   Open in Maps
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                 </span>
@@ -112,7 +113,9 @@ export default function ContactPage() {
           <Reveal delay={0.1}>
             <Eyebrow>Request a Quote</Eyebrow>
             <div className="mt-8 rounded-lg border border-brand-black/10 bg-brand-bg p-6 sm:p-8">
-              <QuoteForm />
+              <Suspense fallback={null}>
+                <QuoteForm />
+              </Suspense>
             </div>
           </Reveal>
         </div>

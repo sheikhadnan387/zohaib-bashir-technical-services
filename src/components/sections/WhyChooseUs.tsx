@@ -63,7 +63,7 @@ export function WhyChooseUs() {
                   <h3 className="mt-3.5 sm:mt-5 font-heading text-[17px] sm:text-[19px] font-bold text-brand-black">
                     {pillar.title}
                   </h3>
-                  <p className="mt-2 text-[13.5px] sm:text-[14.5px] leading-relaxed text-brand-muted">
+                  <p className="mt-2 text-[13.5px] sm:text-[15.5px] leading-relaxed text-brand-muted">
                     {pillar.description}
                   </p>
                 </div>

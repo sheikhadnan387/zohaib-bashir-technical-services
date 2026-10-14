@@ -20,13 +20,13 @@ export function Intro() {
             </Reveal>
 
             <Reveal delay={0.1} className="mt-4 sm:mt-6">
-              <p className="text-[15px] sm:text-[17px] lg:text-[19px] leading-relaxed text-brand-black/75">
+              <p className="text-[16px] sm:text-[17px] lg:text-[19px] leading-relaxed text-brand-black/75">
                 We provide specialized services for residential and commercial
                 properties across Dubai — shampoo cleaning, painting work, AC
                 services and flooring installation, each delivered with the same
                 standard of quality, attention to detail and professional execution.
               </p>
-              <p className="mt-3.5 sm:mt-5 text-[14px] sm:text-[15px] leading-relaxed text-brand-muted">
+              <p className="mt-3.5 sm:mt-5 text-[15px] sm:text-[16px] leading-relaxed text-brand-muted">
                 Each service is handled by people who understand its specific
                 requirements and techniques. Property owners and managers work
                 with a focused team that delivers quality results across every
@@ -64,10 +64,10 @@ export function Intro() {
                   <span className="inline-block rounded-sm bg-brand-orange px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
                     Qualified Team
                   </span>
-                  <p className="mt-1.5 font-heading text-[15px] sm:text-[18px] font-bold text-white">
+                  <p className="mt-1.5 font-heading text-[16px] sm:text-[18px] font-bold text-white">
                     Dedicated Property Care &amp; Technical Services
                   </p>
-                  <p className="mt-1 text-[11.5px] sm:text-[12px] text-white/65">
+                  <p className="mt-1 text-[11.5px] sm:text-[12px] text-white/75">
                     Operating across residential &amp; commercial properties in Dubai
                   </p>
                 </div>

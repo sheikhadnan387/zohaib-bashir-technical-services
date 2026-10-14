@@ -15,13 +15,13 @@ export function ProjectCard({ project, className = "" }: { project: ProjectItem;
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/95 via-brand-black/40 to-transparent transition-opacity duration-500 group-hover:from-brand-black" />
       </div>
       <div className="absolute inset-x-0 bottom-0 p-5">
-        <span className="inline-block rounded-sm bg-brand-orange/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">
+        <span className="inline-block rounded-sm bg-brand-orange px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-brand-black">
           {project.category}
         </span>
         <h3 className="mt-2.5 font-heading text-[16px] font-bold leading-tight text-white">
           {project.title}
         </h3>
-        <p className="mt-1 text-[12.5px] text-white/60">{project.location}</p>
+        <p className="mt-1 text-[12.5px] text-white/70">{project.location}</p>
       </div>
     </div>
   );

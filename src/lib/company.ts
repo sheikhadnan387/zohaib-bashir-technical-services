@@ -18,6 +18,22 @@ export const company = {
   siteUrl: "https://www.zohaibbashirtechnical.com",
 } as const;
 
+// Areas shown in the "Serving Dubai" section — confirm with the client.
+export const serviceAreas = [
+  "Dubai Investment Park",
+  "Jumeirah Village Circle",
+  "Dubai Marina",
+  "Business Bay",
+  "Downtown Dubai",
+  "Arabian Ranches",
+  "Dubai Hills",
+  "Jumeirah",
+  "Al Barsha",
+  "Dubai Silicon Oasis",
+  "Motor City",
+  "Mirdif",
+] as const;
+
 export const socialLinks = {
   whatsapp: company.whatsappHref,
   phone: company.phoneHref,

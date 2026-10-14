@@ -10,13 +10,13 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "overflow-hidden border border-brand-black bg-brand-black px-6 py-3.5 text-white transition-all duration-300 hover:-translate-y-[1px] active:translate-y-0 active:scale-[0.98] motion-reduce:transform-none motion-reduce:transition-none shadow-xs",
+    "border border-brand-orange bg-brand-orange px-6 py-3.5 text-brand-black shadow-[0_6px_20px_rgba(249,115,22,0.25)] transition-all duration-300 hover:-translate-y-[1px] hover:border-brand-orange-accent hover:bg-brand-orange-accent active:translate-y-0 active:scale-[0.98] motion-reduce:transform-none motion-reduce:transition-none",
   secondary:
     "overflow-hidden border border-brand-black/25 bg-brand-black px-6 py-3.5 text-white transition-all duration-300 hover:-translate-y-[1px] active:translate-y-0 active:scale-[0.98] motion-reduce:transform-none motion-reduce:transition-none shadow-xs",
   ghost:
-    "px-0 py-1 text-brand-black transition-colors duration-300 hover:text-brand-orange",
+    "px-0 py-2.5 text-brand-black transition-colors duration-300 hover:text-brand-orange",
   "ghost-light":
-    "px-0 py-1 text-white/90 transition-colors duration-300 hover:text-brand-orange",
+    "px-0 py-2.5 text-white/90 transition-colors duration-300 hover:text-brand-orange",
 };
 
 interface CommonProps {
@@ -38,7 +38,7 @@ export function Button({
     | ({ href: string } & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "className">)
     | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
   )) {
-  const isSwept = variant === "primary" || variant === "secondary";
+  const isSwept = variant === "secondary";
 
   const content = (
     <>
@@ -54,7 +54,9 @@ export function Button({
       <span
         className={clsx(
           "relative z-10 transition-colors duration-300",
-          isSwept
+          variant === "primary"
+            ? "text-brand-black"
+            : isSwept
             ? "text-white group-hover:text-brand-black"
             : variant === "ghost-light"
             ? "text-white/90 group-hover:text-brand-orange"
@@ -69,7 +71,9 @@ export function Button({
         <ArrowUpRight
           className={clsx(
             "relative z-10 h-4 w-4 shrink-0 transition-all duration-300 ease-out",
-            isSwept
+            variant === "primary"
+              ? "text-brand-black group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none"
+              : isSwept
               ? "text-white group-hover:rotate-45 group-hover:translate-x-1 group-hover:text-brand-black motion-reduce:transform-none"
               : "text-current transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           )}

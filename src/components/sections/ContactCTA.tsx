@@ -27,14 +27,14 @@ export function ContactCTA() {
             <br />
             in Mind?
           </h2>
-          <p className="mt-4 sm:mt-6 text-[14.5px] sm:text-[17px] leading-relaxed text-white/70">
+          <p className="mt-4 sm:mt-6 text-[15.5px] sm:text-[17px] leading-relaxed text-white/70">
             Tell us what your property needs and get in touch with our team.
           </p>
 
           <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="focus-ring inline-flex items-center justify-center rounded-[6px] bg-brand-orange px-6 sm:px-7 py-3.5 sm:py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-brand-orange-deep"
+              className="focus-ring inline-flex items-center justify-center rounded-[6px] bg-brand-orange px-6 sm:px-7 py-3.5 sm:py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-black transition-colors hover:bg-brand-orange-accent"
             >
               Request a Quote
             </Link>

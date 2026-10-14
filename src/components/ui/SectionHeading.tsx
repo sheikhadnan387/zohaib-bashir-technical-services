@@ -13,7 +13,7 @@ export function Eyebrow({
     <div
       className={clsx(
         "flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.24em]",
-        tone === "dark" ? "text-brand-orange-deep" : "text-brand-orange",
+        tone === "dark" ? "text-brand-orange-text" : "text-brand-orange",
         className
       )}
     >
@@ -56,8 +56,8 @@ export function SectionHeading({
       {description && (
         <p
           className={clsx(
-            "mt-3 sm:mt-5 max-w-xl text-[14.5px] sm:text-[17px] leading-relaxed",
-            tone === "dark" ? "text-brand-muted" : "text-white/65",
+            "mt-3 sm:mt-5 max-w-xl text-[15.5px] sm:text-[17px] leading-relaxed",
+            tone === "dark" ? "text-brand-muted" : "text-white/75",
             align === "center" && "mx-auto"
           )}
         >

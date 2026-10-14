@@ -37,10 +37,10 @@ export default function ServicesIndexPage() {
 
       <section className="bg-white py-16 sm:py-24">
         <div className="container-edge">
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {services.map((service, i) => (
               <Reveal key={service.slug} delay={(i % 3) * 0.08} y={16}>
-                <ServiceCard service={service} className="h-[300px]" />
+                <ServiceCard service={service} className="h-[340px] xl:h-[400px]" />
               </Reveal>
             ))}
           </div>

@@ -4,8 +4,6 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 
-const tallIndices = new Set([1, 3]);
-
 export function ServicesShowcase() {
   return (
     <section className="bg-white py-14 sm:py-20 lg:py-28">
@@ -28,15 +26,14 @@ export function ServicesShowcase() {
           </Reveal>
         </div>
 
-        <div className="mt-10 sm:mt-14 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:auto-rows-[220px] lg:grid-cols-3 lg:[grid-auto-flow:dense]">
+        <div className="mt-10 sm:mt-14 grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service, i) => (
             <Reveal
               key={service.slug}
               delay={(i % 3) * 0.08}
               y={16}
-              className={tallIndices.has(i) ? "lg:row-span-2" : ""}
             >
-              <ServiceCard service={service} className="h-full" />
+              <ServiceCard service={service} className="h-[320px] sm:h-[360px] xl:h-[400px]" />
             </Reveal>
           ))}
         </div>

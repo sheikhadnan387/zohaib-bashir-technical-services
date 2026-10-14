@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
@@ -24,6 +24,7 @@ export function Header() {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const closeMobile = useCallback(() => setMobileOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -37,12 +38,13 @@ export function Header() {
       <header
         className={clsx(
           "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
+          "h-[var(--header-h)]",
           scrolled
-            ? "border-white/10 bg-brand-black/95 py-1.5 sm:py-2 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md"
-            : "border-white/5 bg-brand-black/85 py-2.5 sm:py-3 backdrop-blur-sm"
+            ? "border-white/10 bg-brand-black/95 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md"
+            : "border-white/5 bg-brand-black/85 backdrop-blur-sm"
         )}
       >
-        <div className="container-edge flex items-center justify-between">
+        <div className="container-edge flex h-full items-center justify-between">
           <Link href="/" className="focus-ring shrink-0" aria-label="Zohaib Bashir Technical Services — home">
             <Logo
               tone="light"
@@ -79,12 +81,12 @@ export function Header() {
 
                   <div
                     className={clsx(
-                      "absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-5 transition-all duration-200",
+                      "absolute left-1/2 top-full w-[280px] -translate-x-1/2 pt-5 transition-all duration-200",
                       megaOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
                     )}
                   >
-                    <div className="rounded-lg border border-white/10 bg-brand-charcoal p-6 shadow-2xl">
-                      <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                    <div className="rounded-lg border border-white/10 bg-brand-charcoal p-3 shadow-2xl">
+                      <div className="flex flex-col gap-0.5">
                         {services.map((service) => {
                           const Icon = getServiceIcon(service.icon);
                           return (
@@ -102,7 +104,7 @@ export function Header() {
                           );
                         })}
                       </div>
-                      <div className="mt-4 border-t border-white/10 pt-4">
+                      <div className="mt-2 border-t border-white/10 px-2 pt-3 pb-1">
                         <Link
                           href="/services"
                           className="focus-ring text-[12px] font-semibold uppercase tracking-[0.16em] text-brand-orange hover:text-brand-orange-accent"
@@ -146,7 +148,7 @@ export function Header() {
         </div>
       </header>
 
-      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <MobileMenu open={mobileOpen} onClose={closeMobile} />
     </>
   );
 }

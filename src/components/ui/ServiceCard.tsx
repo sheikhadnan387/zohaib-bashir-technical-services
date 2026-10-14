@@ -51,7 +51,7 @@ export function ServiceCard({ service, className }: { service: Service; classNam
           <h3 className="font-heading text-[17px] xs:text-[18px] sm:text-[21px] font-bold leading-snug text-white transition-colors duration-300">
             {service.shortName}
           </h3>
-          <p className="mt-1.5 line-clamp-2 text-[12.5px] sm:text-[13.5px] leading-relaxed text-white/65">
+          <p className="mt-1.5 line-clamp-2 text-[12.5px] sm:text-[13.5px] leading-relaxed text-white/75">
             {service.shortDescription}
           </p>
           <div className="mt-3.5 sm:mt-4 flex items-center gap-1.5 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-orange">
