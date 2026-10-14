@@ -91,7 +91,10 @@ export function QuoteForm() {
       const res = await fetch("/api/quote.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          serviceName: services.find((s) => s.slug === form.service)?.name ?? "Other / Not sure",
+        }),
       });
       setStatus(res.ok ? "success" : "failed");
     } catch {

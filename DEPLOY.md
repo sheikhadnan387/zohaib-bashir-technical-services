@@ -19,10 +19,16 @@ npm run package        # builds out/ and writes deploy/site.zip
 - `/services/shampoo-cleaning` redirects (301) to `/services/sofa-carpet-cleaning`.
 - Submit the quote form once; confirm the email arrives (check spam the first time).
 
-## Quote emails
-`public/api/quote.php` → edit `QUOTE_TO` (recipient) and rebuild/upload. Create a mailbox such as
-`info@zohaibbashirtechnicalservices.com` in cPanel → Email Accounts, then point `QUOTE_TO` and
-`company.email` at it.
+## Where quote requests go
+Every quote is handled by `public/api/quote.php` and is delivered **two ways**:
+
+1. **Email** to `QUOTE_TO` in that file (currently `Raiswaris777@gmail.com`). The first few may land in
+   **Spam** — mark them "Not spam" once and Gmail learns the sender.
+2. **A private copy** in `quote-requests.log` in the hosting **home directory** (one request per line;
+   open it in cPanel → File Manager → Home Directory — it is outside `public_html`, so it is not public).
+   This means a lead is never lost even if the email is delayed or filtered.
+
+To change the recipient, edit `QUOTE_TO`, then `npm run package` and re-upload `api/quote.php`.
 
 ## After going live
 - Add the site in Google Search Console and submit `/sitemap.xml`.

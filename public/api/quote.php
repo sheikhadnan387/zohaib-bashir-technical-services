@@ -6,7 +6,7 @@
  * To change where quotes go, edit QUOTE_TO below.
  */
 
-const QUOTE_TO   = 'Raiswaris777@gmail.com';                       // switch to the domain mailbox once created
+const QUOTE_TO   = 'Raiswaris777@gmail.com';                       // where quote emails are delivered
 const QUOTE_FROM = 'quotes@zohaibbashirtechnicalservices.com';      // must be on this domain so mail is accepted
 const SITE_NAME  = 'Zohaib Bashir Technical Services';
 const MAX_PER_WINDOW = 5;
@@ -57,6 +57,7 @@ $name     = line($data['name'] ?? '', 100);
 $phone    = line($data['phone'] ?? '', 30);
 $email    = line($data['email'] ?? '', 120);
 $service  = line($data['service'] ?? '', 60);
+$serviceName = line($data['serviceName'] ?? '', 80) ?: $service;
 $property = line($data['propertyType'] ?? '', 30);
 $location = line($data['location'] ?? '', 150);
 $contact  = line($data['contactMethod'] ?? '', 20);
@@ -71,7 +72,7 @@ $lines = [
     "Name: $name",
     "Phone: $phone",
     'Email: ' . ($email ?: 'Not provided'),
-    "Service: $service",
+    "Service: $serviceName",
     'Property type: ' . ($property ?: 'Not specified'),
     'Location: ' . ($location ?: 'Not specified'),
     'Preferred contact: ' . ($contact ?: 'Not specified'),
@@ -80,6 +81,19 @@ $lines = [
     $details ?: 'Not provided',
 ];
 
+$received = date('Y-m-d H:i:s T');
+
+// 1. Always keep a private copy, outside the public web folder (one JSON object per line).
+//    Find it in cPanel > File Manager > Home directory > quote-requests.log
+$logDir  = dirname($_SERVER['DOCUMENT_ROOT'] ?? __DIR__);
+$logLine = json_encode([
+    'received' => $received, 'ip' => $ip, 'name' => $name, 'phone' => $phone, 'email' => $email,
+    'service' => $serviceName, 'property' => $property, 'location' => $location,
+    'contact' => $contact, 'details' => $details,
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n";
+$logged = @file_put_contents($logDir . '/quote-requests.log', $logLine, FILE_APPEND | LOCK_EX) !== false;
+
+// 2. Email it.
 $headers = [
     'From: ' . SITE_NAME . ' <' . QUOTE_FROM . '>',
     'Content-Type: text/plain; charset=UTF-8',
@@ -89,11 +103,15 @@ if ($email !== '') {
     $headers[] = 'Reply-To: ' . $email;
 }
 
-$subject = '=?UTF-8?B?' . base64_encode("Quote request — $name ($service)") . '?=';
+$subject = '=?UTF-8?B?' . base64_encode("Quote request — $name ($serviceName)") . '?=';
 $sent = mail(QUOTE_TO, $subject, implode("\r\n", $lines), implode("\r\n", $headers), '-f' . QUOTE_FROM);
 
 if (!$sent) {
     error_log('[quote] mail() failed for request from ' . $ip);
+}
+
+// Success if the lead was captured by at least one route; only fail if both failed.
+if (!$sent && !$logged) {
     reply(502, ['error' => 'send_failed']);
 }
 reply(200, ['ok' => true]);
