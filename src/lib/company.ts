@@ -15,7 +15,7 @@ export const company = {
   city: "Dubai",
   country: "United Arab Emirates",
   countryCode: "AE",
-  siteUrl: "https://www.zohaibbashirtechnical.com",
+  siteUrl: "https://zohaibbashirtechnicalservices.com",
   // Approximate centre of Dubai Investment Park 1 — replace with the exact office pin.
   geo: { latitude: 24.985, longitude: 55.17 },
 } as const;

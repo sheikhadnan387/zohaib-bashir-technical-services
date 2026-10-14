@@ -88,7 +88,7 @@ export function QuoteForm() {
     }
     setStatus("sending");
     try {
-      const res = await fetch("/api/quote", {
+      const res = await fetch("/api/quote.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

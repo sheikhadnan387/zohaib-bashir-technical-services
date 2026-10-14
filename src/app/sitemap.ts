@@ -3,6 +3,8 @@ import { company } from "@/lib/company";
 import { services } from "@/lib/services";
 import { subServices } from "@/lib/subservices";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Update this date when page content changes — a build-time "now" would make every URL look modified on every deploy.
   const now = new Date("2026-10-14");

@@ -64,7 +64,7 @@ Dubai Investment Park · Jumeirah Village Circle · Dubai Marina · Business Bay
 → `googleReviewsUrl` in `src/lib/reviews.ts`. If none exists, set one up first — it's the highest-value marketing step for a Dubai trade business.
 
 ## 8. Business email
-*A domain email for enquiries (e.g. info@zohaibbashirtechnical.com) instead of the personal Gmail currently shown.*
+*A domain email for enquiries (e.g. info@zohaibbashirtechnicalservices.com) instead of the personal Gmail currently shown.*
 
 > Answer:
 

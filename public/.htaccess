@@ -1,0 +1,73 @@
+# Zohaib Bashir Technical Services — Apache/LiteSpeed rules for the static export.
+# Upload alongside the contents of out/ into public_html.
+
+DirectorySlash Off
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# 1. HTTPS + canonical host (non-www)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://zohaibbashirtechnicalservices.com%{REQUEST_URI} [L,R=301]
+
+# 2. Old service URLs -> current ones (permanent)
+RewriteRule ^services/shampoo-cleaning/?$ /services/sofa-carpet-cleaning [L,R=301]
+RewriteRule ^services/painting-work/?$ /services/painting-services [L,R=301]
+RewriteRule ^services/ac-services/?$ /services/ac-repair-maintenance [L,R=301]
+RewriteRule ^services/flooring-parquet/?$ /services/parquet-wooden-flooring [L,R=301]
+RewriteRule ^services/hvac/?$ /services/ac-repair-maintenance [L,R=301]
+RewriteRule ^services/building-cleaning/?$ /services/sofa-carpet-cleaning [L,R=301]
+RewriteRule ^services/painting/?$ /services/painting-services [L,R=301]
+RewriteRule ^services/carpentry-wood-flooring/?$ /services/parquet-wooden-flooring [L,R=301]
+RewriteRule ^services/(infrastructure-network|floor-wall-tiling|swimming-pool-maintenance|aluminum-glass|electromechanical)/?$ /services [L,R=301]
+
+# 3. Serve /about and /about/ from about.html. (No trailing-slash redirect:
+#    some servers add their own slash to directory names, which would loop.
+#    Each page's <link rel="canonical"> keeps search engines on one URL.)
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+# Files exported without an extension / unknown to older servers
+<Files "opengraph-image">
+  ForceType image/png
+</Files>
+AddType application/manifest+json .webmanifest
+
+ErrorDocument 404 /404.html
+
+# Never expose the form handler's rate-limit files
+<FilesMatch "\.(log|json)$">
+  Require all denied
+</FilesMatch>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/xml application/xml application/manifest+json
+</IfModule>
+
+# Caching: hashed build assets are immutable; HTML is always revalidated
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header set Strict-Transport-Security "max-age=15552000" env=HTTPS
+</IfModule>

@@ -33,7 +33,7 @@ Solid foundation: consistent dark/orange industrial palette, good mobile action 
 15. **No service-page conversion path above the fold**: service detail pages have a CTA only at the bottom. Add a sticky side card (phone, WhatsApp, quote) and a short inline form.
 16. **No social proof anywhere** (reviews, client logos, Google rating, certificates). Biggest single lever after real photos.
 17. **Contact form is long** (name, phone, email, service, property type, location, details, preferred method). Cut to name, phone, service, optional details; the rest is progressive.
-18. **Email is a personal Gmail** (`Raiswaris777@gmail.com`) — hurts credibility. Use `info@zohaibbashirtechnical.com`.
+18. **Email is a personal Gmail** (`Raiswaris777@gmail.com`) — hurts credibility. Use `info@zohaibbashirtechnicalservices.com`.
 19. **Header**: on scroll the logo shrinks and the CTA stays invisible (see #1). Mega menu is 640px for 4 links — a simple dropdown is enough. Mobile menu doesn't trap focus or lock scroll (code).
 20. **Site loader** (`SiteLoader.tsx`) delays every first view ~1.25 s and locks scroll; it's a branding nicety that hurts LCP. Remove or run only on first session.
 21. **Mobile hero**: 13 px white strip between the header (71 px) and hero (starts at 84 px) because `main` uses a fixed `pt-[84px]` but the mobile header is shorter. → Use a CSS variable for header height.

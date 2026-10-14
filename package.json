@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "package": "next build && mkdir -p deploy && rm -f deploy/site.zip && (cd out && zip -rq ../deploy/site.zip .)"
   },
   "dependencies": {
     "clsx": "^2.1.1",
