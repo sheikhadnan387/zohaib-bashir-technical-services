@@ -10,6 +10,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
+  // Inline the (small) stylesheet into each page: one less round trip before first paint
+  // on a high-latency host.
+  experimental: { inlineCss: true },
 };
 
 export default nextConfig;
