@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FileBadge2, Building2, Phone } from "lucide-react";
 import { company } from "@/lib/company";
 import { Button } from "@/components/ui/Button";
@@ -5,19 +6,16 @@ import { Button } from "@/components/ui/Button";
 export function Hero() {
   return (
     <section className="relative h-[calc(100svh-var(--header-h))] min-h-[480px] max-h-[700px] sm:max-h-none sm:min-h-[580px] lg:min-h-[640px] w-full overflow-hidden bg-brand-black">
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-hidden="true"
-        poster="/images/home/hero-poster.webp"
-        className="absolute inset-0 h-full w-full object-cover object-[70%_center] sm:object-center pointer-events-none"
-      >
-        <source src="/video/hero-services.mp4" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <Image
+        src="/images/home/hero.webp"
+        alt=""
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="object-cover object-[72%_center] sm:object-center"
+      />
 
       {/* Readability Overlays */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/60 to-transparent sm:via-brand-black/40" />
