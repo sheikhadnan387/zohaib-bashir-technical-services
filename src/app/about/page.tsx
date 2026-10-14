@@ -12,9 +12,9 @@ import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us",
+  title: "About Us | Technical Services Company Dubai",
   description:
-    "Zohaib Bashir Technical Services is a Dubai-based provider offering AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring.",
+    "Zohaib Bashir Technical Services is a licensed Dubai provider of AC repair, painting, sofa & carpet cleaning and parquet & wooden flooring.",
   path: "/about",
 });
 

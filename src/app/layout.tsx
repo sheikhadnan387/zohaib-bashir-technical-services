@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -20,6 +20,10 @@ const manrope = Manrope({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0b0d0f",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
   title: {
@@ -27,7 +31,7 @@ export const metadata: Metadata = {
     template: `%s | ${company.shortName}`,
   },
   description:
-    "Licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
+    "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
   keywords: [
     "Technical Services Dubai",
     "AC Repair Dubai",
@@ -44,17 +48,13 @@ export const metadata: Metadata = {
     siteName: company.legalName,
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
+      "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${company.legalName} | Technical Services Dubai`,
     description:
       "AC repair, painting, sofa & carpet cleaning and parquet flooring across Dubai.",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 

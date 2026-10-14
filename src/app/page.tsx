@@ -13,7 +13,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Technical Services Dubai | AC, Painting, Cleaning & Flooring",
   description:
-    "Zohaib Bashir Technical Services — licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
+    "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
   path: "/",
   absoluteTitle: true,
 });

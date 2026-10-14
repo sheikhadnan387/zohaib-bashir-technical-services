@@ -5,7 +5,7 @@ import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Projects",
+  title: "Before & After Projects Dubai",
   description:
     "Before and after examples of sofa cleaning, painting, AC servicing and parquet flooring work across Dubai properties.",
   path: "/projects",

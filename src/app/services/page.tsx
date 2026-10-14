@@ -9,7 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = buildMetadata({
   title: "Our Services | AC, Painting, Cleaning, Flooring",
   description:
-    "AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring in Dubai — professional services for homes and commercial properties.",
+    "AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring in Dubai for homes and commercial properties.",
   path: "/services",
 });
 

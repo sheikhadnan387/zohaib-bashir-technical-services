@@ -70,7 +70,7 @@ export const services: Service[] = [
     relatedSlugs: ["painting-services", "ac-repair-maintenance"],
     seoTitle: "Sofa & Carpet Cleaning Dubai | Deep Cleaning",
     seoDescription:
-      "Professional sofa and carpet cleaning in Dubai — shampoo and deep-extraction cleaning for sofas, carpets, mattresses and curtains in homes and offices. Request a quote.",
+      "Sofa and carpet cleaning in Dubai — shampoo and deep-extraction cleaning for sofas, carpets, mattresses and curtains in homes and offices. Request a quote.",
     keywords: ["sofa cleaning Dubai", "carpet cleaning Dubai", "carpet shampoo Dubai", "sofa cleaning service Dubai", "mattress cleaning Dubai", "curtain cleaning Dubai", "upholstery cleaning Dubai"],
   },
   {
@@ -198,7 +198,7 @@ export const services: Service[] = [
     relatedSlugs: ["painting-services", "ac-repair-maintenance"],
     seoTitle: "Parquet & Wooden Flooring Dubai | Installation",
     seoDescription:
-      "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood, vinyl and laminate floors for villas, apartments and offices. Request a quote.",
+      "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood, vinyl and laminate floors for homes and offices. Request a quote.",
     keywords: ["flooring Dubai", "parquet flooring Dubai", "wooden flooring Dubai", "vinyl flooring Dubai", "laminate flooring Dubai", "flooring company Dubai", "floor polishing Dubai"],
   },
 ];

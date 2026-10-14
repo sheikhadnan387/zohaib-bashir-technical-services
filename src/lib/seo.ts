@@ -31,11 +31,13 @@ export function buildMetadata({
       siteName: SITE_NAME,
       locale: "en_AE",
       type: "website",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: `${SITE_NAME} — Technical Services Dubai` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["/twitter-image"],
     },
   };
 }
@@ -51,7 +53,6 @@ export function localBusinessSchema() {
     url: company.siteUrl,
     telephone: company.phoneE164,
     email: company.email,
-    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: company.officeLine1,

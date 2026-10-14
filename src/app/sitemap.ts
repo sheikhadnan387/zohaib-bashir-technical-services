@@ -4,7 +4,8 @@ import { services } from "@/lib/services";
 import { subServices } from "@/lib/subservices";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // Update this date when page content changes — a build-time "now" would make every URL look modified on every deploy.
+  const now = new Date("2026-10-14");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${company.siteUrl}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },

@@ -9,7 +9,7 @@ import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Us",
+  title: "Contact Us | Get a Quote in Dubai",
   description:
     "Get in touch with Zohaib Bashir Technical Services in Dubai — call, WhatsApp, email or request a quote for technical, maintenance and installation services.",
   path: "/contact",
