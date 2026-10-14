@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Eyebrow } from "@/components/ui/SectionHeading";
-import { Reveal } from "@/components/ui/Reveal";
 
 export function PageHeader({
   breadcrumbItems,
@@ -41,7 +40,7 @@ export function PageHeader({
 
             {/* Bottom-Left Aligned Content */}
             <div className="relative z-10 flex h-full flex-col justify-end p-5 sm:p-10 lg:p-14">
-              <Reveal>
+              <div className="animate-fade-up">
                 <Breadcrumb items={breadcrumbItems} tone="light" />
                 <h1 className="mt-4 font-heading text-[30px] xs:text-[34px] sm:text-[44px] md:text-[52px] lg:text-[60px] font-bold leading-[1.04] text-white break-words">
                   {title}
@@ -51,7 +50,7 @@ export function PageHeader({
                     {description}
                   </p>
                 )}
-              </Reveal>
+              </div>
             </div>
           </div>
         </div>
@@ -72,7 +71,7 @@ export function PageHeader({
       />
       <div className="container-edge relative">
         <Breadcrumb items={breadcrumbItems} tone="light" />
-        <Reveal className="mt-6 max-w-2xl">
+        <div className="animate-fade-up mt-6 max-w-2xl">
           {eyebrow && <Eyebrow tone="light" className="mb-4 sm:mb-5">{eyebrow}</Eyebrow>}
           <h1 className="font-heading text-[28px] xs:text-[34px] sm:text-[48px] lg:text-[58px] font-bold leading-[1.06] text-white break-words">
             {title}
@@ -82,7 +81,7 @@ export function PageHeader({
               {description}
             </p>
           )}
-        </Reveal>
+        </div>
       </div>
     </section>
   );

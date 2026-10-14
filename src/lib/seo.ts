@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { company } from "./company";
+import { company, serviceAreas } from "./company";
 
 const SITE_NAME = `${company.legalName}`;
 
@@ -42,7 +42,8 @@ export function localBusinessSchema() {
     "@type": "LocalBusiness",
     "@id": `${company.siteUrl}/#organization`,
     name: company.legalName,
-    image: `${company.siteUrl}/og-image.jpg`,
+    image: `${company.siteUrl}/opengraph-image`,
+    logo: `${company.siteUrl}/logo/logo.svg`,
     url: company.siteUrl,
     telephone: company.phoneE164,
     email: company.email,
@@ -53,10 +54,23 @@ export function localBusinessSchema() {
       addressLocality: company.city,
       addressCountry: company.countryCode,
     },
-    areaServed: {
-      "@type": "City",
-      name: "Dubai",
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: company.geo.latitude,
+      longitude: company.geo.longitude,
     },
+    areaServed: [
+      { "@type": "City", name: "Dubai" },
+      ...serviceAreas.map((name) => ({ "@type": "Place", name })),
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: company.phoneE164,
+      contactType: "customer service",
+      areaServed: "AE",
+      availableLanguage: ["English"],
+    },
+    knowsAbout: ["Shampoo cleaning", "Painting", "AC servicing", "Flooring and parquet"],
   };
 }
 
@@ -91,6 +105,7 @@ export function serviceSchema({
     url: `${company.siteUrl}${path}`,
     provider: {
       "@type": "LocalBusiness",
+      "@id": `${company.siteUrl}/#organization`,
       name: company.legalName,
     },
     areaServed: {

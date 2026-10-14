@@ -1,7 +1,6 @@
 import { FileBadge2, Building2, Phone } from "lucide-react";
 import { company } from "@/lib/company";
 import { Button } from "@/components/ui/Button";
-import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 export function Hero() {
   return (
@@ -14,7 +13,7 @@ export function Hero() {
         playsInline
         preload="metadata"
         aria-hidden="true"
-        poster="/images/home/cta-property.webp"
+        poster="/images/home/hero-poster.webp"
         className="absolute inset-0 h-full w-full object-cover object-[70%_center] sm:object-center pointer-events-none"
       >
         <source src="/video/hero-services.mp4" type="video/mp4" />
@@ -26,30 +25,30 @@ export function Hero() {
 
       {/* Hero Content */}
       <div className="container-edge relative z-10 flex h-full flex-col justify-end pb-8 sm:justify-center sm:pb-0">
-        <RevealGroup className="max-w-3xl" stagger={0.12}>
-          <RevealItem>
+        <div className="max-w-3xl">
+          <div className="animate-fade-up" style={{ animationDelay: "0.00s" }}>
             <div className="flex items-center gap-2.5 sm:gap-3 text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.28em] text-brand-orange">
               <span className="h-px w-6 sm:w-8 bg-brand-orange" />
               Technical Services • Dubai
             </div>
-          </RevealItem>
+          </div>
 
-          <RevealItem>
+          <div className="animate-fade-up" style={{ animationDelay: "0.12s" }}>
             <h1 className="mt-3 sm:mt-6 font-heading text-[28px] xs:text-[32px] sm:text-[46px] md:text-[58px] lg:text-[70px] font-bold leading-[1.08] text-white break-words">
               Technical Expertise.
               <br />
               Built Around Your Property.
             </h1>
-          </RevealItem>
+          </div>
 
-          <RevealItem>
+          <div className="animate-fade-up" style={{ animationDelay: "0.24s" }}>
             <p className="mt-3 sm:mt-5 max-w-lg text-[15px] sm:text-[16.5px] lg:text-[18px] leading-relaxed text-white/75">
               Professional installation, maintenance and technical services
               for residential and commercial properties across Dubai.
             </p>
-          </RevealItem>
+          </div>
 
-          <RevealItem>
+          <div className="animate-fade-up" style={{ animationDelay: "0.36s" }}>
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <Button href="/contact" variant="primary" withArrow className="justify-center sm:justify-start">
                 Request a Quote
@@ -58,9 +57,9 @@ export function Hero() {
                 Explore Our Services
               </Button>
             </div>
-          </RevealItem>
+          </div>
 
-          <RevealItem>
+          <div className="animate-fade-up" style={{ animationDelay: "0.48s" }}>
             <ul className="mt-7 sm:mt-10 flex flex-wrap gap-x-6 gap-y-2.5 border-t border-white/15 pt-5 text-[13px] sm:text-[13.5px] text-white/80">
               <li className="flex items-center gap-2">
                 <FileBadge2 className="h-4 w-4 text-brand-orange" aria-hidden="true" />
@@ -77,8 +76,8 @@ export function Hero() {
                 </a>
               </li>
             </ul>
-          </RevealItem>
-        </RevealGroup>
+          </div>
+        </div>
       </div>
     </section>
   );
