@@ -33,3 +33,10 @@ To change the recipient, edit `QUOTE_TO`, then `npm run package` and re-upload `
 ## After going live
 - Add the site in Google Search Console and submit `/sitemap.xml`.
 - Set up the Google Business Profile (see SEO-KEYWORDS.md).
+
+## Google Search Console
+- Property: `https://zohaibbashirtechnicalservices.com/` (URL prefix), verified by HTML file on 14 Oct 2026 under the Google
+  account sheikhadnan387@gmail.com. Sitemap `sitemap.xml` submitted (Google found 17 pages).
+- **Never delete `googlec6943ba2c1b5dd7b.html` from `public_html`** — removing it un-verifies the property.
+  It lives in `public/`, so every `npm run package` re-includes it.
+- Add the business owner as a second owner: Search Console → Settings → Users and permissions → Add user (Owner).
