@@ -7,6 +7,7 @@ import { company } from "@/lib/company";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { DubaiSection } from "@/components/sections/DubaiSection";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -136,30 +137,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Dubai Location */}
-      <section className="relative overflow-hidden bg-brand-charcoal py-16 sm:py-24">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(249,115,22,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.08) 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-          }}
-        />
-        <div className="container-edge relative grid grid-cols-1 gap-12 lg:grid-cols-12">
-          <Reveal className="lg:col-span-4">
-            <Eyebrow tone="light">Dubai Location</Eyebrow>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-8">
-            <p className="text-[17px] leading-relaxed text-white/70 sm:text-[19px]">
-              Our office is based at {company.officeLine1}, {company.officeLine2}.
-              From here, we serve residential and commercial properties
-              across Dubai, coordinating technical work across all four
-              service areas.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <DubaiSection />
 
       {/* Company Information */}
       <section className="bg-white py-16 sm:py-24">

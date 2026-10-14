@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CheckCircle2, MapPin, Phone, MessageCircle, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { company } from "@/lib/company";
+import { company, serviceAreas } from "@/lib/company";
 import { services, getServiceBySlug, getRelatedServices } from "@/lib/services";
 import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
 import { PageHeader } from "@/components/sections/PageHeader";
@@ -206,6 +206,22 @@ export default async function ServiceDetailPage({
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-7 border-t border-brand-black/10 pt-6">
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-brand-black/55">
+                      Available across Dubai
+                    </p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {serviceAreas.slice(0, 8).map((area) => (
+                        <li
+                          key={area}
+                          className="rounded-full border border-brand-black/10 bg-white px-3 py-1 text-[13px] text-brand-black/75"
+                        >
+                          {area}
+                        </li>
+                      ))}
+                      <li className="rounded-full px-1 py-1 text-[13px] text-brand-black/55">+ all of Dubai</li>
+                    </ul>
+                  </div>
                 </div>
               </Reveal>
             </div>

@@ -20,9 +20,9 @@ const breadcrumbItems = [
   { name: "Contact", path: "/contact" },
 ];
 
-const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${company.officeLine1}, ${company.officeLine2}`
-)}`;
+const mapsQuery = encodeURIComponent(`${company.officeLine1}, ${company.officeLine2}`);
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+const mapsEmbedSrc = `https://www.google.com/maps?q=${mapsQuery}&z=14&output=embed`;
 
 export default function ContactPage() {
   return (
@@ -84,30 +84,28 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <a
-              href={mapsHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="focus-ring group relative mt-6 flex aspect-[16/9] w-full items-end overflow-hidden rounded-lg bg-brand-black"
-            >
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(249,115,22,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(249,115,22,0.16) 1px, transparent 1px)",
-                  backgroundSize: "30px 30px",
-                }}
+            <div className="mt-6 overflow-hidden rounded-lg border border-brand-black/10 bg-brand-bg">
+              <iframe
+                title={`Map of ${company.legalName} office, ${company.officeLine1}`}
+                src={mapsEmbedSrc}
+                className="block aspect-[16/9] w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
-              <div className="relative flex w-full items-center justify-between gap-3 p-5">
-                <span className="text-[13px] font-medium text-white/70">
-                  {company.officeLine1}, {company.officeLine2}
-                </span>
-                <span className="inline-flex shrink-0 items-center gap-1.5 rounded-[6px] bg-brand-orange px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-black">
+              <a
+                href={mapsHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring flex items-center justify-between gap-3 px-5 py-3.5 text-[14px] text-brand-black/75 transition-colors hover:text-brand-orange-text"
+              >
+                <span>{company.officeLine1}, {company.officeLine2}</span>
+                <span className="inline-flex shrink-0 items-center gap-1.5 text-[12px] font-semibold uppercase tracking-[0.1em]">
                   Open in Maps
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                 </span>
-              </div>
-            </a>
+              </a>
+            </div>
           </Reveal>
 
           <Reveal delay={0.1}>

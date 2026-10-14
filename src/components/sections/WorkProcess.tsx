@@ -31,7 +31,7 @@ const steps = [
 
 export function WorkProcess() {
   return (
-    <section className="bg-white py-14 sm:py-20 lg:py-28">
+    <section className="bg-brand-bg py-14 sm:py-20 lg:py-28">
       <div className="container-edge">
         <SectionHeading
           eyebrow="How We Work"
@@ -56,7 +56,7 @@ export function WorkProcess() {
             return (
               <li key={step.number} className="relative">
                 <Reveal delay={i * 0.08} y={16} className="flex gap-5 lg:block">
-                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-orange/40 bg-white text-brand-orange shadow-[0_0_0_6px_#ffffff]">
+                  <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-brand-orange/40 bg-white text-brand-orange shadow-[0_0_0_6px_var(--color-bg)]">
                     <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
                   </div>
                   <div className="lg:mt-6">
