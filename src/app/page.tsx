@@ -5,6 +5,7 @@ import { ServicesShowcase } from "@/components/sections/ServicesShowcase";
 import { RecentWork } from "@/components/sections/RecentWork";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { WorkProcess } from "@/components/sections/WorkProcess";
+import { Reviews } from "@/components/sections/Reviews";
 import { DubaiSection } from "@/components/sections/DubaiSection";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { buildMetadata } from "@/lib/seo";
@@ -26,6 +27,7 @@ export default function Home() {
       <DubaiSection />
       <WhyChooseUs />
       <WorkProcess />
+      <Reviews />
       <ContactCTA />
     </>
   );
