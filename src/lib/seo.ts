@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { company, serviceAreas } from "./company";
+import { services } from "./services";
 
 const SITE_NAME = `${company.legalName}`;
 
@@ -8,15 +9,18 @@ export function buildMetadata({
   description,
   path,
   keywords,
+  absoluteTitle = false,
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
+  /** Skip the "| Brand" title template (use for the homepage, which carries the brand itself). */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = `${company.siteUrl}${path}`;
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     keywords,
     alternates: { canonical: url },
@@ -70,7 +74,19 @@ export function localBusinessSchema() {
       areaServed: "AE",
       availableLanguage: ["English"],
     },
-    knowsAbout: ["Shampoo cleaning", "Painting", "AC servicing", "Flooring and parquet"],
+    knowsAbout: services.map((s) => s.name),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Technical services in Dubai",
+      itemListElement: services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          url: `${company.siteUrl}/services/${s.slug}`,
+        },
+      })),
+    },
   };
 }
 

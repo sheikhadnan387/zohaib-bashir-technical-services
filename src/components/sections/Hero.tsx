@@ -33,7 +33,7 @@ export function Hero() {
 
           <div className="animate-fade-up" style={{ animationDelay: "0.12s" }}>
             <h1 className="mt-3 sm:mt-6 font-heading text-[28px] xs:text-[32px] sm:text-[46px] md:text-[58px] lg:text-[70px] font-bold leading-[1.08] text-white break-words">
-              Technical Expertise.
+              Technical Services in Dubai.
               <br />
               Built Around Your Property.
             </h1>
@@ -41,8 +41,8 @@ export function Hero() {
 
           <div className="animate-fade-up" style={{ animationDelay: "0.24s" }}>
             <p className="mt-3 sm:mt-5 max-w-lg text-[15px] sm:text-[16.5px] lg:text-[18px] leading-relaxed text-white/75">
-              Professional installation, maintenance and technical services
-              for residential and commercial properties across Dubai.
+              AC repair and maintenance, painting, sofa and carpet cleaning, and
+              parquet flooring for homes and businesses across Dubai.
             </p>
           </div>
 

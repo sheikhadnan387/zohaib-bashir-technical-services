@@ -30,7 +30,7 @@ export const sampleReviews: Review[] = [
   {
     name: "Sample — A. Customer",
     context: "Villa, Dubai",
-    serviceSlug: "shampoo-cleaning",
+    serviceSlug: "sofa-carpet-cleaning",
     rating: 5,
     quote:
       "Sample review text. Replace with a genuine customer quote once you have permission to publish it.",
@@ -39,7 +39,7 @@ export const sampleReviews: Review[] = [
   {
     name: "Sample — B. Customer",
     context: "Apartment, Dubai",
-    serviceSlug: "ac-services",
+    serviceSlug: "ac-repair-maintenance",
     rating: 5,
     quote:
       "Sample review text showing how a slightly longer quote wraps across two or three lines in the card layout.",
@@ -48,7 +48,7 @@ export const sampleReviews: Review[] = [
   {
     name: "Sample — C. Customer",
     context: "Office, Dubai",
-    serviceSlug: "painting-work",
+    serviceSlug: "painting-services",
     rating: 4,
     quote: "Sample review text for a four-star rating.",
     source: "Google",

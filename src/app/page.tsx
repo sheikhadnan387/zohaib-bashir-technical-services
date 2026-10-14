@@ -11,10 +11,11 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Zohaib Bashir Technical Services | Technical Services Dubai",
+  title: "Technical Services Dubai | AC, Painting, Cleaning & Flooring",
   description:
-    "Professional shampoo cleaning, painting, AC services and flooring work for residential and commercial properties across Dubai.",
+    "Zohaib Bashir Technical Services — licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
   path: "/",
+  absoluteTitle: true,
 });
 
 export default function Home() {

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { company } from "@/lib/company";
 import { services } from "@/lib/services";
+import { subServices } from "@/lib/subservices";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -22,5 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  const subServiceRoutes: MetadataRoute.Sitemap = subServices.map((s) => ({
+    url: `${company.siteUrl}/services/${s.parentSlug}/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...subServiceRoutes];
 }

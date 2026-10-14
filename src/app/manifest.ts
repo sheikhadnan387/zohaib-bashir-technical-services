@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: company.legalName,
     short_name: company.shortName,
-    description: "Shampoo cleaning, painting, AC services and flooring work across Dubai.",
+    description: "AC repair, painting, sofa & carpet cleaning and parquet flooring across Dubai.",
     start_url: "/",
     display: "browser",
     background_color: "#0b0d0f",

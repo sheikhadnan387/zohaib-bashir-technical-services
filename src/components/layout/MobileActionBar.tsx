@@ -13,7 +13,7 @@ const quietLabel = "text-[11px] font-medium leading-none tracking-[0.01em]";
 
 export function MobileActionBar() {
   const pathname = usePathname();
-  const service = getServiceBySlug(pathname.replace(/^\/services\//, ""));
+  const service = getServiceBySlug(pathname.split("/")[1] === "services" ? pathname.split("/")[2] ?? "" : "");
   const whatsappHref = service
     ? `${company.whatsappHref}?text=${encodeURIComponent(`Hi, I'd like a quote for ${service.name}.`)}`
     : company.whatsappHref;

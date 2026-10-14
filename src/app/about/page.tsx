@@ -14,7 +14,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
   description:
-    "Zohaib Bashir Technical Services is a Dubai-based provider offering shampoo cleaning, painting, AC services and flooring work.",
+    "Zohaib Bashir Technical Services is a Dubai-based provider offering AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring.",
   path: "/about",
 });
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
         breadcrumbItems={breadcrumbItems}
         eyebrow="About Us"
         title="Technical Capability. Professional Execution."
-        description="A Dubai-based service provider specializing in shampoo cleaning, painting, AC services and flooring work for residential and commercial properties."
+        description="A Dubai-based service provider specializing in AC repair & maintenance, painting, sofa & carpet cleaning and parquet flooring for residential and commercial properties."
         image="/images/pages/about-hero.webp"
         imageAlt="Zohaib Bashir Technical Services professional team in Dubai"
       />
@@ -63,8 +63,8 @@ export default function AboutPage() {
             </p>
             <p className="mt-5 text-[16.5px] leading-relaxed text-brand-muted">
               Based at Dubai Investment Park 1, the company provides
-              shampoo cleaning, painting, AC services and flooring work
-              to residential and commercial properties across Dubai, with
+              AC repair and maintenance, painting, sofa and carpet cleaning,
+              and parquet and wooden flooring to residential and commercial properties across Dubai, with
               a focus on quality execution and professional service delivery.
             </p>
           </Reveal>

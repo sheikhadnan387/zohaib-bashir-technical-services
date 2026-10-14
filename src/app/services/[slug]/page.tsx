@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { CheckCircle2, MapPin, Phone, MessageCircle, ArrowUpRight } from "lucide-react";
+import { CheckCircle2, MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { company, serviceAreas } from "@/lib/company";
+import { serviceAreas } from "@/lib/company";
+import { getSubServicesFor } from "@/lib/subservices";
+import { ServiceQuoteCard } from "@/components/ui/ServiceQuoteCard";
 import { services, getServiceBySlug, getRelatedServices } from "@/lib/services";
 import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
 import { PageHeader } from "@/components/sections/PageHeader";
@@ -42,6 +44,7 @@ export default async function ServiceDetailPage({
   if (!service) notFound();
 
   const related = getRelatedServices(service);
+  const subs = getSubServicesFor(service.slug);
 
   const breadcrumbItems = [
     { name: "Home", path: "/" },
@@ -123,47 +126,44 @@ export default async function ServiceDetailPage({
                   </p>
                 </Reveal>
               </div>
+
+              {subs.length > 0 && (
+                <div className="mt-14">
+                  <Reveal>
+                    <h2 className="font-heading text-[26px] font-bold text-brand-black sm:text-[30px]">
+                      Popular {service.shortName} Services
+                    </h2>
+                    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      {subs.map((sub) => (
+                        <Link
+                          key={sub.slug}
+                          href={`/services/${service.slug}/${sub.slug}`}
+                          className="focus-ring group rounded-lg border border-brand-black/10 bg-brand-bg p-5 transition-colors hover:border-brand-orange"
+                        >
+                          <span className="flex items-center justify-between gap-3">
+                            <span className="font-heading text-[18px] font-bold text-brand-black">{sub.shortName}</span>
+                            <ArrowUpRight
+                              className="h-4 w-4 shrink-0 text-brand-black/40 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-orange"
+                              aria-hidden="true"
+                            />
+                          </span>
+                          <span className="mt-1.5 block text-[15px] leading-relaxed text-brand-muted">{sub.blurb}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </Reveal>
+                </div>
+              )}
             </div>
 
             {/* Sidebar Visual & Property Types Column */}
             <div className="flex flex-col gap-8 lg:col-span-5 lg:sticky lg:top-[calc(var(--header-h)+24px)] lg:self-start">
               <Reveal delay={0.05}>
-                <div className="rounded-lg border border-brand-black/10 bg-brand-black p-6 text-white sm:p-7">
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-brand-orange">
-                    Get a quote for {service.shortName}
-                  </p>
-                  <p className="mt-2 text-[15px] leading-relaxed text-white/75">
-                    Tell us about the property and we&rsquo;ll come back with a clear scope and price.
-                  </p>
-                  <div className="mt-5 flex flex-col gap-3">
-                    <Link
-                      href={`/contact?service=${service.slug}`}
-                      className="focus-ring inline-flex items-center justify-center gap-2 rounded-[6px] bg-brand-orange px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-black transition-colors hover:bg-brand-orange-accent"
-                    >
-                      Request a Quote
-                      <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
-                    <div className="grid grid-cols-2 gap-3">
-                      <a
-                        href={company.phoneHref}
-                        className="focus-ring inline-flex items-center justify-center gap-2 rounded-[6px] border border-white/20 px-4 py-3 text-[12.5px] font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:border-brand-orange hover:text-brand-orange"
-                      >
-                        <Phone className="h-4 w-4" aria-hidden="true" />
-                        Call
-                      </a>
-                      <a
-                        href={`${company.whatsappHref}?text=${encodeURIComponent(`Hi, I'd like a quote for ${service.name}.`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="focus-ring inline-flex items-center justify-center gap-2 rounded-[6px] border border-white/20 px-4 py-3 text-[12.5px] font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:border-[#25D366] hover:text-[#25D366]"
-                      >
-                        <MessageCircle className="h-4 w-4" aria-hidden="true" />
-                        WhatsApp
-                      </a>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-[13px] text-white/60">{company.phoneDisplay} · Dubai, UAE</p>
-                </div>
+                <ServiceQuoteCard
+                  heading={`Get a quote for ${service.shortName}`}
+                  serviceSlug={service.slug}
+                  whatsappSubject={service.name}
+                />
               </Reveal>
 
               <Reveal delay={0.1}>

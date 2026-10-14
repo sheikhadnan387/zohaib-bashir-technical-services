@@ -7,7 +7,7 @@ import { WhatsAppGlyph } from "@/components/ui/WhatsAppGlyph";
 
 export function WhatsAppButton() {
   const pathname = usePathname();
-  const service = getServiceBySlug(pathname.replace(/^\/services\//, ""));
+  const service = getServiceBySlug(pathname.split("/")[1] === "services" ? pathname.split("/")[2] ?? "" : "");
   const href = service
     ? `${company.whatsappHref}?text=${encodeURIComponent(`Hi, I'd like a quote for ${service.name}.`)}`
     : company.whatsappHref;

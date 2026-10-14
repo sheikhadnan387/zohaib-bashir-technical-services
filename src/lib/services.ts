@@ -32,11 +32,11 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "shampoo-cleaning",
+    id: "sofa-carpet-cleaning",
     number: "01",
-    slug: "shampoo-cleaning",
-    name: "Shampoo Cleaning Services",
-    shortName: "Shampoo Cleaning",
+    slug: "sofa-carpet-cleaning",
+    name: "Sofa & Carpet Cleaning Services",
+    shortName: "Sofa & Carpet Cleaning",
     category: "Cleaning",
     icon: "Sparkles",
     image: "/images/services/shampoo-cleaning.webp",
@@ -46,15 +46,15 @@ export const services: Service[] = [
     detailImageAlt: "Specialized deep extraction shampoo machine lifting stains and allergens from sofa upholstery",
     detailCaption: "Deep Extraction & Fiber Sanitization",
     shortDescription:
-      "Professional shampoo and deep cleaning for sofas, carpets, mattresses and curtains in residential and commercial properties.",
-    heroTagline: "Deep cleaning that brings fabrics back to life.",
+      "Sofa, carpet, mattress and curtain cleaning — shampoo and deep-extraction cleaning for homes and commercial properties in Dubai.",
+    heroTagline: "Sofa and carpet cleaning that brings fabrics back to life.",
     intro:
-      "Quality fabrics and textiles need specialized care to stay fresh and durable. We provide professional shampoo cleaning for sofas, carpets, mattresses and curtains across residential and commercial properties, using proven techniques and industry-standard equipment to remove dirt, allergens and stains while preserving the material.",
+      "Sofas, carpets, mattresses and curtains take daily wear and collect dirt, dust and stains. We provide professional sofa cleaning and carpet cleaning in Dubai for homes, offices and hospitality properties, using shampoo and deep-extraction methods with industry-standard equipment to remove dirt, allergens and stains while protecting the fabric.",
     whatWeDo: [
-      "Sofa shampoo cleaning and stain removal",
+      "Sofa cleaning and stain removal (shampoo and extraction)",
       "Carpet shampoo cleaning and deep extraction",
-      "Mattress shampoo cleaning and sanitization",
-      "Curtain shampoo cleaning and treatment",
+      "Mattress cleaning and sanitization",
+      "Curtain cleaning and treatment",
       "Upholstered furniture cleaning",
       "Allergen removal and odor treatment",
       "Pre-treatment and post-cleaning protection",
@@ -67,18 +67,18 @@ export const services: Service[] = [
     ],
     approach:
       "We assess the fabric type and condition before cleaning, selecting the appropriate shampoo and extraction method to remove deep-set dirt and stains while protecting the material's integrity and appearance.",
-    relatedSlugs: ["painting-work", "ac-services"],
-    seoTitle: "Shampoo Cleaning Services Dubai — Sofa, Carpet, Mattress & Curtain Cleaning",
+    relatedSlugs: ["painting-services", "ac-repair-maintenance"],
+    seoTitle: "Sofa & Carpet Cleaning Dubai | Deep Cleaning",
     seoDescription:
-      "Professional shampoo cleaning in Dubai for sofas, carpets, mattresses and curtains — deep cleaning services for residential and commercial properties.",
-    keywords: ["shampoo cleaning Dubai", "sofa cleaning Dubai", "carpet cleaning Dubai", "mattress cleaning Dubai", "curtain cleaning Dubai"],
+      "Professional sofa and carpet cleaning in Dubai — shampoo and deep-extraction cleaning for sofas, carpets, mattresses and curtains in homes and offices. Request a quote.",
+    keywords: ["sofa cleaning Dubai", "carpet cleaning Dubai", "carpet shampoo Dubai", "sofa cleaning service Dubai", "mattress cleaning Dubai", "curtain cleaning Dubai", "upholstery cleaning Dubai"],
   },
   {
-    id: "painting-work",
+    id: "painting-services",
     number: "02",
-    slug: "painting-work",
-    name: "Painting Work",
-    shortName: "Painting Work",
+    slug: "painting-services",
+    name: "Painting Services",
+    shortName: "Painting Services",
     category: "Painting",
     icon: "Paintbrush",
     image: "/images/services/painting-work.webp",
@@ -88,10 +88,10 @@ export const services: Service[] = [
     detailImageAlt: "Freshly painted warm-white bedroom with crisp edges, painter removing the final masking tape",
     detailCaption: "Flawless Surface Preparation & Finishing",
     shortDescription:
-      "Interior and exterior painting services for residential and commercial properties.",
+      "Interior and exterior painting services for villas, apartments, offices and commercial properties in Dubai.",
     heroTagline: "A precise finish, from prep to final coat.",
     intro:
-      "Quality paintwork starts with proper surface preparation. We handle everything from surface prep, filling and sanding to the final coat, using industry-standard materials and techniques to deliver a clean, durable finish for residential and commercial spaces.",
+      "Quality paintwork starts with proper surface preparation. Our painting services in Dubai cover villas, apartments, offices and commercial units — from surface prep, filling and sanding to the final coat — using industry-standard materials and techniques to deliver a clean, durable finish.",
     whatWeDo: [
       "Interior painting for residential and commercial spaces",
       "Exterior painting and facade work",
@@ -109,18 +109,18 @@ export const services: Service[] = [
     ],
     approach:
       "We prepare every surface before painting begins — filling, sanding and priming as needed — because the quality of a finish is set well before the first coat of paint is applied.",
-    relatedSlugs: ["shampoo-cleaning", "flooring-parquet"],
-    seoTitle: "Painting Services Dubai",
+    relatedSlugs: ["sofa-carpet-cleaning", "parquet-wooden-flooring"],
+    seoTitle: "Painting Services Dubai | Villa & Apartment",
     seoDescription:
-      "Interior and exterior painting services in Dubai for residential and commercial properties — surface preparation, painting and finishing.",
-    keywords: ["painting services Dubai", "painting contractor Dubai", "interior painting Dubai", "exterior painting Dubai"],
+      "Painting services in Dubai for villas, apartments and offices — interior and exterior painting with proper surface preparation and a clean finish. Request a quote.",
+    keywords: ["painting services Dubai", "wall painting Dubai", "villa painting Dubai", "apartment painting Dubai", "painters in Dubai", "interior painting Dubai", "painting company Dubai"],
   },
   {
-    id: "ac-services",
+    id: "ac-repair-maintenance",
     number: "03",
-    slug: "ac-services",
-    name: "AC Services Installation & Maintenance",
-    shortName: "AC Services",
+    slug: "ac-repair-maintenance",
+    name: "AC Repair & Maintenance",
+    shortName: "AC Repair & Maintenance",
     category: "AC",
     icon: "Wind",
     image: "/images/services/ac-services.webp",
@@ -130,10 +130,10 @@ export const services: Service[] = [
     detailImageAlt: "Technician reading a digital manifold gauge on an outdoor AC condenser unit",
     detailCaption: "Diagnostics & Efficiency Optimization",
     shortDescription:
-      "Air-conditioning installation, servicing and maintenance for residential and commercial properties.",
+      "AC repair, servicing, cleaning and installation for homes and commercial properties in Dubai.",
     heroTagline: "Reliable cooling engineered for Dubai's climate.",
     intro:
-      "Dependable air-conditioning is essential for Dubai properties. We install, service and maintain AC units, ensuring systems run efficiently and reliably throughout the year. From routine maintenance to fault diagnosis and repair, we keep your cooling systems performing at their best.",
+      "Dependable air-conditioning is essential for Dubai properties. We provide AC repair, AC maintenance and installation, keeping systems running efficiently and reliably throughout the year. From routine servicing and cleaning to fault diagnosis and repair, we keep your cooling systems performing at their best.",
     whatWeDo: [
       "AC unit installation for new and existing properties",
       "Routine AC servicing and maintenance programs",
@@ -151,18 +151,18 @@ export const services: Service[] = [
     ],
     approach:
       "We treat each AC system individually, performing thorough inspections to identify issues early and address them before they impact performance. Regular maintenance keeps systems running efficiently and extends equipment life.",
-    relatedSlugs: ["shampoo-cleaning", "flooring-parquet"],
-    seoTitle: "AC Services & HVAC Maintenance Dubai",
+    relatedSlugs: ["sofa-carpet-cleaning", "parquet-wooden-flooring"],
+    seoTitle: "AC Repair & Maintenance Dubai | AC Servicing",
     seoDescription:
-      "Air-conditioning installation, servicing and maintenance in Dubai — AC repair, maintenance and installation for residential and commercial properties.",
-    keywords: ["AC services Dubai", "AC maintenance Dubai", "air conditioning installation Dubai", "AC repair Dubai"],
+      "AC repair and maintenance in Dubai — servicing, cleaning, fault repair and installation for villas, apartments and offices. Call, WhatsApp or request a quote.",
+    keywords: ["AC repair Dubai", "AC maintenance Dubai", "AC service Dubai", "AC cleaning Dubai", "AC duct cleaning Dubai", "AC installation Dubai", "AC maintenance company Dubai"],
   },
   {
-    id: "flooring-parquet",
+    id: "parquet-wooden-flooring",
     number: "04",
-    slug: "flooring-parquet",
-    name: "Flooring & Parquet Work",
-    shortName: "Flooring & Parquet Work",
+    slug: "parquet-wooden-flooring",
+    name: "Parquet & Wooden Flooring",
+    shortName: "Parquet & Wooden Flooring",
     category: "Flooring",
     icon: "Hammer",
     image: "/images/services/flooring-parquet.webp",
@@ -172,10 +172,10 @@ export const services: Service[] = [
     detailImageAlt: "Installer pressing an oak herringbone parquet block into fresh adhesive",
     detailCaption: "Precision Subfloor Prep & Parquet Craftsmanship",
     shortDescription:
-      "Wood, parquet and laminate flooring installation and repair for residential and commercial properties.",
+      "Parquet, wooden and laminate flooring installation, repair and refinishing for homes and commercial properties in Dubai.",
     heroTagline: "Precision flooring from preparation to finishing.",
     intro:
-      "Quality flooring transforms a space. We install and maintain wood, parquet and laminate flooring with careful attention to substrate preparation, material selection and precision installation. From new installations to repairs and refinishing, our work is built to last.",
+      "Quality flooring transforms a space. We install and maintain parquet, wooden and laminate flooring in Dubai with careful attention to substrate preparation, material selection and precision installation. From new installations to repairs and refinishing, our work is built to last.",
     whatWeDo: [
       "Wood flooring installation",
       "Parquet flooring installation and pattern work",
@@ -194,11 +194,11 @@ export const services: Service[] = [
     ],
     approach:
       "Every flooring project starts with precise site measurement and substrate assessment. We correct leveling issues first, select appropriate materials for the space, and install with attention to detail so the finished surface is durable, level and visually flawless.",
-    relatedSlugs: ["painting-work", "ac-services"],
-    seoTitle: "Flooring & Parquet Installation Dubai",
+    relatedSlugs: ["painting-services", "ac-repair-maintenance"],
+    seoTitle: "Parquet & Wooden Flooring Dubai | Installation",
     seoDescription:
-      "Wood, parquet and laminate flooring installation in Dubai — flooring services for residential and commercial properties including installation, repair and refinishing.",
-    keywords: ["flooring installation Dubai", "parquet flooring Dubai", "wood flooring Dubai", "laminate flooring Dubai"],
+      "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood and laminate floors for villas, apartments and offices. Request a quote.",
+    keywords: ["flooring Dubai", "parquet flooring Dubai", "wooden flooring Dubai", "laminate flooring Dubai", "flooring company Dubai", "floor polishing Dubai"],
   },
 ];
 

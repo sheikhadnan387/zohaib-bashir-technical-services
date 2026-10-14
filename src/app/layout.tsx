@@ -23,17 +23,19 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
   title: {
-    default: `${company.legalName} | Technical Services Dubai`,
-    template: `%s | ${company.legalName}`,
+    default: "Technical Services Dubai | AC, Painting, Cleaning & Flooring",
+    template: `%s | ${company.shortName}`,
   },
   description:
-    "Professional shampoo cleaning, painting, AC services and flooring work for residential and commercial properties across Dubai.",
+    "Licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
   keywords: [
     "Technical Services Dubai",
-    "Shampoo Cleaning Dubai",
-    "AC Services Dubai",
+    "AC Repair Dubai",
     "Painting Services Dubai",
-    "Flooring Services Dubai",
+    "Sofa Cleaning Dubai",
+    "Carpet Cleaning Dubai",
+    "Flooring Dubai",
+    "Parquet Flooring Dubai",
   ],
   authors: [{ name: company.legalName }],
   openGraph: {
@@ -42,13 +44,13 @@ export const metadata: Metadata = {
     siteName: company.legalName,
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Professional shampoo cleaning, painting, AC services and flooring work for residential and commercial properties across Dubai.",
+      "Licensed Dubai technical services company: AC repair & maintenance, painting services, sofa & carpet cleaning, and parquet & wooden flooring for homes and offices.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Shampoo cleaning, painting, AC services and flooring work across Dubai.",
+      "AC repair, painting, sofa & carpet cleaning and parquet flooring across Dubai.",
   },
   robots: {
     index: true,
