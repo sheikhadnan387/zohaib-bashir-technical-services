@@ -56,7 +56,7 @@ export function ProjectsGrid() {
             className={clsx(
               "focus-ring rounded-[6px] border px-4 py-2 text-[12.5px] font-semibold uppercase tracking-[0.1em] transition-colors",
               active === tab.value
-                ? "border-brand-orange bg-brand-orange text-white"
+                ? "border-brand-orange bg-brand-orange text-brand-black"
                 : "border-brand-black/15 text-brand-black/60 hover:border-brand-black/30"
             )}
           >
@@ -65,7 +65,7 @@ export function ProjectsGrid() {
         ))}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
         {filtered.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

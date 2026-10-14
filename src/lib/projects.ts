@@ -4,22 +4,79 @@ export interface ProjectItem {
   id: string;
   title: string;
   category: ProjectCategory;
-  location: string;
+  /** Property type rather than a named location — no client-identifying data is published. */
+  property: string;
   serviceSlug: string;
-  size: "large" | "medium" | "small";
-  image: string;
+  summary: string;
+  before: { image: string; alt: string };
+  after: { image: string; alt: string };
 }
 
 export const projects: ProjectItem[] = [
-  { id: "p1", title: "Residential AC Maintenance Program", category: "AC", location: "Dubai Investment Park", serviceSlug: "ac-services", size: "large", image: "/images/projects/project-ac.webp" },
-  { id: "p2", title: "Villa Flooring & Parquet Installation", category: "Flooring", location: "Arabian Ranches", serviceSlug: "flooring-parquet", size: "medium", image: "/images/projects/project-flooring.webp" },
-  { id: "p3", title: "Apartment Interior Paint & Refresh", category: "Painting", location: "Dubai Marina", serviceSlug: "painting-work", size: "small", image: "/images/projects/project-painting.webp" },
-  { id: "p4", title: "Commercial Carpet & Upholstery Cleaning", category: "Cleaning", location: "Business Bay", serviceSlug: "shampoo-cleaning", size: "medium", image: "/images/projects/project-cleaning.webp" },
+  {
+    id: "p1",
+    title: "Split AC Service & Deep Clean",
+    category: "AC",
+    property: "Apartment, Dubai",
+    serviceSlug: "ac-services",
+    summary: "Filter wash, coil clean, drain flush and performance check on a wall-mounted split unit.",
+    before: {
+      image: "/images/projects/project-ac-before.webp",
+      alt: "Wall-mounted split AC with its cover open showing a dusty filter before servicing",
+    },
+    after: {
+      image: "/images/projects/project-ac.webp",
+      alt: "Technician wiping down the same split AC unit after servicing, cover closed and clean",
+    },
+  },
+  {
+    id: "p2",
+    title: "Herringbone Parquet Installation",
+    category: "Flooring",
+    property: "Villa living room, Dubai",
+    serviceSlug: "flooring-parquet",
+    summary: "Subfloor levelling and adhesive-fixed oak herringbone parquet across the main living area.",
+    before: {
+      image: "/images/projects/project-flooring-before.webp",
+      alt: "Bare levelled concrete subfloor with stacked parquet blocks ready for installation",
+    },
+    after: {
+      image: "/images/projects/project-flooring.webp",
+      alt: "Finished oak herringbone parquet floor with installer checking the final row",
+    },
+  },
+  {
+    id: "p3",
+    title: "Bedroom Repaint",
+    category: "Painting",
+    property: "Villa bedroom, Dubai",
+    serviceSlug: "painting-work",
+    summary: "Filling, sanding and two coats of warm-white emulsion with masked, crisp edges.",
+    before: {
+      image: "/images/projects/project-painting-before.webp",
+      alt: "Empty bedroom with scuffed walls, filler patches and masking tape before painting",
+    },
+    after: {
+      image: "/images/projects/project-painting.webp",
+      alt: "Freshly painted warm-white bedroom with painter removing the last masking tape",
+    },
+  },
+  {
+    id: "p4",
+    title: "Office Sofa Shampoo Clean",
+    category: "Cleaning",
+    property: "Office lounge, Dubai",
+    serviceSlug: "shampoo-cleaning",
+    summary: "Pre-treatment and hot-water extraction to lift stains and restore even tone on fabric seating.",
+    before: {
+      image: "/images/projects/project-cleaning-before.webp",
+      alt: "Light grey fabric sofa with visible stains before shampoo cleaning",
+    },
+    after: {
+      image: "/images/projects/project-cleaning.webp",
+      alt: "Technician finishing an upholstery extraction clean on the same sofa, now stain-free",
+    },
+  },
 ];
 
-export const projectCategories: ProjectCategory[] = [
-  "AC",
-  "Flooring",
-  "Painting",
-  "Cleaning",
-];
+export const projectCategories: ProjectCategory[] = ["AC", "Flooring", "Painting", "Cleaning"];

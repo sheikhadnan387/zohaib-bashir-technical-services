@@ -85,7 +85,7 @@ export const services: Service[] = [
     bannerImage: "/images/services/painting-work.webp",
     bannerAlt: "Professional painter applying smooth interior wall paint in a luxury Dubai apartment",
     detailImage: "/images/projects/project-painting.webp",
-    detailImageAlt: "Completed interior painting project with pristine wall finishes overlooking Dubai Marina",
+    detailImageAlt: "Freshly painted warm-white bedroom with crisp edges, painter removing the final masking tape",
     detailCaption: "Flawless Surface Preparation & Finishing",
     shortDescription:
       "Interior and exterior painting services for residential and commercial properties.",
@@ -127,7 +127,7 @@ export const services: Service[] = [
     bannerImage: "/images/services/ac-services.webp",
     bannerAlt: "Professional HVAC technician installing and maintaining a split air conditioner in Dubai",
     detailImage: "/images/home/featured-ac.webp",
-    detailImageAlt: "HVAC technician performing digital diagnostic pressure and electrical check on AC unit",
+    detailImageAlt: "Technician reading a digital manifold gauge on an outdoor AC condenser unit",
     detailCaption: "Diagnostics & Efficiency Optimization",
     shortDescription:
       "Air-conditioning installation, servicing and maintenance for residential and commercial properties.",
@@ -169,7 +169,7 @@ export const services: Service[] = [
     bannerImage: "/images/services/flooring-parquet.webp",
     bannerAlt: "Professional flooring specialist installing premium wooden parquet flooring in Dubai",
     detailImage: "/images/home/featured-flooring.webp",
-    detailImageAlt: "Precision alignment and mallet installation of herringbone parquet wood blocks",
+    detailImageAlt: "Installer pressing an oak herringbone parquet block into fresh adhesive",
     detailCaption: "Precision Subfloor Prep & Parquet Craftsmanship",
     shortDescription:
       "Wood, parquet and laminate flooring installation and repair for residential and commercial properties.",

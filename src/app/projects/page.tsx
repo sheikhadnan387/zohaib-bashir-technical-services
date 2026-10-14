@@ -7,7 +7,7 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = buildMetadata({
   title: "Projects",
   description:
-    "Project examples showcasing shampoo cleaning, painting, AC services and flooring work across Dubai.",
+    "Before and after examples of shampoo cleaning, painting, AC servicing and flooring work across Dubai properties.",
   path: "/projects",
 });
 
@@ -27,8 +27,8 @@ export default function ProjectsPage() {
       <PageHeader
         breadcrumbItems={breadcrumbItems}
         eyebrow="Portfolio"
-        title="Selected Work"
-        description="Representative categories of technical work carried out across Dubai properties."
+        title="Before & After"
+        description="Side-by-side examples of shampoo cleaning, painting, AC servicing and flooring work across Dubai properties."
         image="/images/pages/projects-hero.webp"
         imageAlt="Selected residential and commercial technical projects in Dubai"
       />
@@ -36,12 +36,10 @@ export default function ProjectsPage() {
       <section className="bg-white py-16 sm:py-24">
         <div className="container-edge">
           <ProjectsGrid />
-          <p className="mt-12 max-w-2xl border-t border-brand-black/10 pt-6 text-[13px] leading-relaxed text-brand-muted">
-            The entries above are placeholder / demo listings that illustrate
-            the categories of work we undertake. No client-identifying
-            project data or photography has been published here — this
-            section will be updated with verified, completed project records
-            and photography as they become available.
+          <p className="mt-12 max-w-2xl border-t border-brand-black/10 pt-6 text-[14px] leading-relaxed text-brand-muted">
+            Representative examples of the work we carry out. Property types
+            are shown instead of addresses — no client-identifying details are
+            published.
           </p>
         </div>
       </section>

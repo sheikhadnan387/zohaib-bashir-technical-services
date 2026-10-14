@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { Intro } from "@/components/sections/Intro";
 import { ServicesShowcase } from "@/components/sections/ServicesShowcase";
+import { RecentWork } from "@/components/sections/RecentWork";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { WorkProcess } from "@/components/sections/WorkProcess";
 import { DubaiSection } from "@/components/sections/DubaiSection";
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <Intro />
       <ServicesShowcase />
+      <RecentWork />
       <DubaiSection />
       <WhyChooseUs />
       <WorkProcess />
