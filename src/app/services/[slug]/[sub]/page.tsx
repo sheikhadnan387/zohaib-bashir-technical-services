@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, ArrowUpRight, ChevronDown } from "lucide-react";
+import { CheckCircle2, ArrowUpRight } from "lucide-react";
 import { getServiceBySlug } from "@/lib/services";
 import { subServices, getSubService, getSubServicesFor } from "@/lib/subservices";
-import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from "@/lib/seo";
+import { FaqList } from "@/components/ui/FaqList";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { ServiceQuoteCard } from "@/components/ui/ServiceQuoteCard";
@@ -63,6 +64,10 @@ export default async function SubServicePage({
           __html: JSON.stringify(serviceSchema({ name: page.name, description: page.seoDescription, path })),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(page.faqs)) }}
+      />
 
       <PageHeader
         breadcrumbItems={breadcrumbItems}
@@ -105,16 +110,8 @@ export default async function SubServicePage({
               <div className="mt-14">
                 <Reveal>
                   <h2 className="font-heading text-[26px] font-bold text-brand-black sm:text-[30px]">Common Questions</h2>
-                  <div className="mt-6 divide-y divide-brand-black/10 rounded-lg border border-brand-black/10">
-                    {page.faqs.map((faq) => (
-                      <details key={faq.q} className="group px-5 py-4 sm:px-6">
-                        <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 text-[16.5px] font-semibold text-brand-black [&::-webkit-details-marker]:hidden">
-                          {faq.q}
-                          <ChevronDown className="h-5 w-5 shrink-0 text-brand-black/50 transition-transform group-open:rotate-180" aria-hidden="true" />
-                        </summary>
-                        <p className="mt-3 text-[15.5px] leading-relaxed text-brand-muted">{faq.a}</p>
-                      </details>
-                    ))}
+                  <div className="mt-6">
+                    <FaqList faqs={page.faqs} />
                   </div>
                 </Reveal>
               </div>

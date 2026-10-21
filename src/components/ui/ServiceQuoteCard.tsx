@@ -7,14 +7,19 @@ export function ServiceQuoteCard({
   heading,
   serviceSlug,
   whatsappSubject,
+  startingPrice,
 }: {
   heading: string;
   serviceSlug: string;
   whatsappSubject: string;
+  startingPrice?: string;
 }) {
   return (
     <div className="rounded-lg border border-brand-black/10 bg-brand-black p-6 text-white sm:p-7">
       <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-brand-orange">{heading}</p>
+      {startingPrice && (
+        <p className="mt-3 font-heading text-[22px] font-bold leading-snug text-white">{startingPrice}</p>
+      )}
       <p className="mt-2 text-[15px] leading-relaxed text-white/75">
         Tell us about the property and we&rsquo;ll come back with a clear scope and price.
       </p>
@@ -45,7 +50,9 @@ export function ServiceQuoteCard({
           </a>
         </div>
       </div>
-      <p className="mt-4 text-[13px] text-white/60">{company.phoneDisplay} · Dubai, UAE</p>
+      <p className="mt-4 text-[13px] text-white/60">
+        {company.phoneDisplay} · WhatsApp {company.whatsappHours}
+      </p>
     </div>
   );
 }

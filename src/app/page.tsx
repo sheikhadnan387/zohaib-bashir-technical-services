@@ -8,12 +8,13 @@ import { WorkProcess } from "@/components/sections/WorkProcess";
 import { Reviews } from "@/components/sections/Reviews";
 import { DubaiSection } from "@/components/sections/DubaiSection";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { QuickQuote } from "@/components/sections/QuickQuote";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Technical Services Dubai | AC, Painting, Cleaning & Flooring",
+  title: "Technical Services Dubai | Painting, AC, Flooring & Cleaning",
   description:
-    "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
+    "Licensed Dubai technical services and home maintenance company since 2021: painting, AC repair & maintenance, parquet flooring and sofa & carpet cleaning. Studio painting from AED 350.",
   path: "/",
   absoluteTitle: true,
 });
@@ -24,6 +25,7 @@ export default function Home() {
       <Hero />
       <Intro />
       <ServicesShowcase />
+      <QuickQuote />
       <RecentWork />
       <DubaiSection />
       <WhyChooseUs />

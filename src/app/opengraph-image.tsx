@@ -31,7 +31,7 @@ export default function OpenGraphImage() {
             {company.legalName}
           </div>
           <div style={{ fontSize: 30, color: "rgba(255,255,255,0.75)" }}>
-            AC repair · Painting · Sofa &amp; carpet cleaning · Flooring
+            Painting · AC repair · Flooring · Sofa &amp; carpet cleaning
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: "rgba(255,255,255,0.7)" }}>

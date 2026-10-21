@@ -7,7 +7,7 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 export const metadata: Metadata = buildMetadata({
   title: "Before & After Projects Dubai",
   description:
-    "Before and after examples of sofa cleaning, painting, AC servicing and parquet flooring work across Dubai properties.",
+    "Before and after examples of painting, AC servicing, parquet flooring and sofa cleaning work across Dubai properties.",
   path: "/projects",
 });
 
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
         breadcrumbItems={breadcrumbItems}
         eyebrow="Portfolio"
         title="Before & After"
-        description="Side-by-side examples of sofa cleaning, painting, AC servicing and parquet flooring work across Dubai properties."
+        description="Side-by-side examples of painting, AC servicing, parquet flooring and sofa cleaning work across Dubai properties."
         image="/images/pages/projects-hero.webp"
         imageAlt="Selected residential and commercial technical projects in Dubai"
       />

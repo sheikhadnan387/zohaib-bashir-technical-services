@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
-import { CheckCircle2, AlertCircle, MessageCircle } from "lucide-react";
+import { CheckCircle2, AlertCircle, MessageCircle, ChevronDown } from "lucide-react";
 import { services } from "@/lib/services";
 import { company } from "@/lib/company";
 
@@ -180,13 +180,16 @@ export function QuoteForm() {
 
       <div>
         <label className={labelClasses} htmlFor="service">Service</label>
-        <select id="service" className={inputClasses} value={form.service} onChange={(e) => update("service", e.target.value)} aria-invalid={!!errors.service}>
-          <option value="">Select a service</option>
-          {services.map((s) => (
-            <option key={s.slug} value={s.slug}>{s.shortName}</option>
-          ))}
-          <option value="other">Other / Not Sure</option>
-        </select>
+        <div className="relative">
+          <select id="service" className={`${inputClasses} cursor-pointer appearance-none pr-11`} value={form.service} onChange={(e) => update("service", e.target.value)} aria-invalid={!!errors.service}>
+            <option value="">Select a service</option>
+            {services.map((s) => (
+              <option key={s.slug} value={s.slug}>{s.shortName}</option>
+            ))}
+            <option value="other">Other / Not Sure</option>
+          </select>
+          <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-brand-black/50" aria-hidden="true" />
+        </div>
         {errors.service && <p className="mt-1.5 text-[12.5px] text-red-600">{errors.service}</p>}
       </div>
 
@@ -200,11 +203,14 @@ export function QuoteForm() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div>
             <label className={labelClasses} htmlFor="propertyType">Property Type</label>
-            <select id="propertyType" className={inputClasses} value={form.propertyType} onChange={(e) => update("propertyType", e.target.value)}>
-              <option value="">Select property type</option>
-              <option value="Residential">Residential</option>
-              <option value="Commercial">Commercial</option>
-            </select>
+            <div className="relative">
+              <select id="propertyType" className={`${inputClasses} cursor-pointer appearance-none pr-11`} value={form.propertyType} onChange={(e) => update("propertyType", e.target.value)}>
+                <option value="">Select property type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-brand-black/50" aria-hidden="true" />
+            </div>
           </div>
           <div>
             <label className={labelClasses} htmlFor="location">Location</label>

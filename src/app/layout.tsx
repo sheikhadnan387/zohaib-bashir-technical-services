@@ -27,11 +27,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
   title: {
-    default: "Technical Services Dubai | AC, Painting, Cleaning & Flooring",
+    default: "Technical Services Dubai | Painting, AC, Flooring & Cleaning",
     template: `%s | ${company.shortName}`,
   },
   description:
-    "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
+    "Licensed Dubai technical services company: painting, AC repair & maintenance, parquet & wooden flooring and sofa & carpet cleaning for homes and offices.",
   keywords: [
     "Technical Services Dubai",
     "AC Repair Dubai",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     siteName: company.legalName,
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "Licensed Dubai technical services company: AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring for homes and offices.",
+      "Licensed Dubai technical services company: painting, AC repair & maintenance, parquet & wooden flooring and sofa & carpet cleaning for homes and offices.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${company.legalName} | Technical Services Dubai`,
     description:
-      "AC repair, painting, sofa & carpet cleaning and parquet flooring across Dubai.",
+      "Painting, AC repair, parquet flooring and sofa & carpet cleaning across Dubai.",
   },
 };
 

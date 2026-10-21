@@ -75,6 +75,7 @@ export function localBusinessSchema() {
       areaServed: "AE",
       availableLanguage: ["English"],
     },
+    foundingDate: String(company.foundingYear),
     knowsAbout: services.map((s) => s.name),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -129,5 +130,17 @@ export function serviceSchema({
       "@type": "City",
       name: "Dubai",
     },
+  };
+}
+
+export function faqSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
 }

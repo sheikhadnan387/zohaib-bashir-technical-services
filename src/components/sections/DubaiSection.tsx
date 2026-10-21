@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { MapPin } from "lucide-react";
+import { areas } from "@/lib/areas";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { company, serviceAreas } from "@/lib/company";
+import { company } from "@/lib/company";
 
 export function DubaiSection() {
   return (
@@ -39,12 +41,14 @@ export function DubaiSection() {
               Areas we regularly serve
             </div>
             <ul className="mt-5 flex flex-wrap gap-2.5">
-              {serviceAreas.map((area) => (
-                <li
-                  key={area}
-                  className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13.5px] text-white/85"
-                >
-                  {area}
+              {areas.map((area) => (
+                <li key={area.slug}>
+                  <Link
+                    href={`/areas/${area.slug}`}
+                    className="focus-ring inline-block rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[13.5px] text-white/85 transition-colors hover:border-brand-orange hover:text-white"
+                  >
+                    {area.name}
+                  </Link>
                 </li>
               ))}
             </ul>

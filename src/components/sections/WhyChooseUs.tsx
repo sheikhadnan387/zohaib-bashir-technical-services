@@ -21,7 +21,7 @@ const pillars = [
     icon: Wrench,
     title: "Specialists for Each Trade",
     description:
-      "Cleaning, painting, AC and flooring each have their own techniques and tools. Each is handled by people who know that trade, not a general handyman.",
+      "Painting, AC, flooring and cleaning each have their own techniques and tools. Each is handled by people who know that trade, not a general handyman.",
   },
 ];
 

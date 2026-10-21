@@ -147,3 +147,23 @@ Lowest competition of the four services — realistic to rank organically first.
 ### Also
 - Services the client may offer that have real volume but aren't on the site yet: **vinyl flooring (590/mo, low competition)** and **AC installation (390/mo)**. Confirm before adding.
 - Add `proofPoints` (response time, guarantee, year established) in `company.ts` — see `CLIENT-QUESTIONNAIRE.md`.
+
+---
+
+## Implemented (21 Oct 2026)
+
+Second pass on the same keyword data: gave the remaining high-volume terms their own pages instead of sharing one.
+
+| New page | Target keyword | Vol | Comp |
+|---|---|---|---|
+| `/services/sofa-carpet-cleaning/carpet-cleaning` | carpet cleaning dubai (+ carpet shampoo) | 2,900 | H |
+| `/services/sofa-carpet-cleaning/sofa-cleaning` | sofa cleaning dubai (+ sofa cleaning service, upholstery) | 1,900 + 480 + 110 | H/M |
+| `/services/painting-services/apartment-painting` | apartment painting dubai (+ wall painting) | 140 + 320 | H |
+| `/services/painting-services/villa-painting` | villa painting dubai | 140 | **L** |
+| `/services/parquet-wooden-flooring/laminate-flooring` | laminate flooring dubai | 260 | **L** |
+
+Also:
+- Homepage description and intro now say "technical services and home maintenance company" (maintenance company dubai 1,300, home maintenance services dubai 590).
+- JVC area page title leads with "AC Repair JVC" (210/mo, the only area term with real volume).
+- Confirmed facts now used in copy: studio painting from AED 350, since 2021, WhatsApp 7am–12am, 48-hour fix-it promise.
+- Note: 18 area pages were added on client request. Per the research above they won't rank on volume alone; each has its own property/needs copy, FAQ and Quick Quote. Keep them useful, not templated.

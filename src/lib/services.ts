@@ -27,55 +27,15 @@ export interface Service {
   relatedSlugs: string[];
   seoTitle: string;
   seoDescription: string;
+  /** Client-confirmed starting price, e.g. "Studio from AED 350". Omit when not confirmed. */
+  startingPrice?: string;
   keywords: string[];
 }
 
 export const services: Service[] = [
   {
-    id: "sofa-carpet-cleaning",
-    number: "01",
-    slug: "sofa-carpet-cleaning",
-    name: "Sofa & Carpet Cleaning Services",
-    shortName: "Sofa & Carpet Cleaning",
-    category: "Cleaning",
-    icon: "Sparkles",
-    image: "/images/services/shampoo-cleaning.webp",
-    bannerImage: "/images/services/shampoo-cleaning.webp",
-    bannerAlt: "Professional sofa, carpet, mattress, and curtain deep cleaning in a modern Dubai home",
-    detailImage: "/images/home/featured-cleaning.webp",
-    detailImageAlt: "Specialized deep extraction shampoo machine lifting stains and allergens from sofa upholstery",
-    detailCaption: "Deep Extraction & Fiber Sanitization",
-    shortDescription:
-      "Sofa, carpet, mattress and curtain cleaning — shampoo and deep-extraction cleaning for homes and commercial properties in Dubai.",
-    heroTagline: "Sofa and carpet cleaning that brings fabrics back to life.",
-    intro:
-      "Sofas, carpets, mattresses and curtains take daily wear and collect dirt, dust and stains. We provide professional sofa cleaning and carpet cleaning in Dubai for homes, offices and hospitality properties, using shampoo and deep-extraction methods with industry-standard equipment to remove dirt, allergens and stains while protecting the fabric.",
-    whatWeDo: [
-      "Sofa cleaning and stain removal (shampoo and extraction)",
-      "Carpet shampoo cleaning and deep extraction",
-      "Mattress cleaning and sanitization",
-      "Curtain cleaning and treatment",
-      "Upholstered furniture cleaning",
-      "Allergen removal and odor treatment",
-      "Pre-treatment and post-cleaning protection",
-    ],
-    applications: [
-      "Residential apartments and villas",
-      "Family homes and living spaces",
-      "Offices and commercial interiors",
-      "Hotels and hospitality properties",
-    ],
-    approach:
-      "We assess the fabric type and condition before cleaning, selecting the appropriate shampoo and extraction method to remove deep-set dirt and stains while protecting the material's integrity and appearance.",
-    relatedSlugs: ["painting-services", "ac-repair-maintenance"],
-    seoTitle: "Sofa & Carpet Cleaning Dubai | Deep Cleaning",
-    seoDescription:
-      "Sofa and carpet cleaning in Dubai — shampoo and deep-extraction cleaning for sofas, carpets, mattresses and curtains in homes and offices. Request a quote.",
-    keywords: ["sofa cleaning Dubai", "carpet cleaning Dubai", "carpet shampoo Dubai", "sofa cleaning service Dubai", "mattress cleaning Dubai", "curtain cleaning Dubai", "upholstery cleaning Dubai"],
-  },
-  {
     id: "painting-services",
-    number: "02",
+    number: "01",
     slug: "painting-services",
     name: "Painting Services",
     shortName: "Painting Services",
@@ -110,6 +70,7 @@ export const services: Service[] = [
     approach:
       "We prepare every surface before painting begins — filling, sanding and priming as needed — because the quality of a finish is set well before the first coat of paint is applied.",
     relatedSlugs: ["sofa-carpet-cleaning", "parquet-wooden-flooring"],
+    startingPrice: "Studio wall painting from AED 350",
     seoTitle: "Painting Services Dubai | Villa & Apartment",
     seoDescription:
       "Painting services in Dubai for villas, apartments and offices — interior and exterior painting with proper surface preparation and a clean finish. Request a quote.",
@@ -117,7 +78,7 @@ export const services: Service[] = [
   },
   {
     id: "ac-repair-maintenance",
-    number: "03",
+    number: "02",
     slug: "ac-repair-maintenance",
     name: "AC Repair & Maintenance",
     shortName: "AC Repair & Maintenance",
@@ -159,7 +120,7 @@ export const services: Service[] = [
   },
   {
     id: "parquet-wooden-flooring",
-    number: "04",
+    number: "03",
     slug: "parquet-wooden-flooring",
     name: "Parquet & Wooden Flooring",
     shortName: "Parquet & Wooden Flooring",
@@ -200,6 +161,48 @@ export const services: Service[] = [
     seoDescription:
       "Parquet and wooden flooring in Dubai — installation, repair and refinishing of parquet, wood, vinyl and laminate floors for homes and offices. Request a quote.",
     keywords: ["flooring Dubai", "parquet flooring Dubai", "wooden flooring Dubai", "vinyl flooring Dubai", "laminate flooring Dubai", "flooring company Dubai", "floor polishing Dubai"],
+  },
+  {
+    id: "sofa-carpet-cleaning",
+    number: "04",
+    slug: "sofa-carpet-cleaning",
+    name: "Sofa & Carpet Cleaning Services",
+    shortName: "Sofa & Carpet Cleaning",
+    category: "Cleaning",
+    icon: "Sparkles",
+    image: "/images/services/shampoo-cleaning.webp",
+    bannerImage: "/images/services/shampoo-cleaning.webp",
+    bannerAlt: "Professional sofa, carpet, mattress, and curtain deep cleaning in a modern Dubai home",
+    detailImage: "/images/home/featured-cleaning.webp",
+    detailImageAlt: "Specialized deep extraction shampoo machine lifting stains and allergens from sofa upholstery",
+    detailCaption: "Deep Extraction & Fiber Sanitization",
+    shortDescription:
+      "Sofa, carpet, mattress and curtain cleaning — shampoo and deep-extraction cleaning for homes and commercial properties in Dubai.",
+    heroTagline: "Sofa and carpet cleaning that brings fabrics back to life.",
+    intro:
+      "Sofas, carpets, mattresses and curtains take daily wear and collect dirt, dust and stains. We provide professional sofa cleaning and carpet cleaning in Dubai for homes, offices and hospitality properties, using shampoo and deep-extraction methods with industry-standard equipment to remove dirt, allergens and stains while protecting the fabric.",
+    whatWeDo: [
+      "Sofa cleaning and stain removal (shampoo and extraction)",
+      "Carpet shampoo cleaning and deep extraction",
+      "Mattress cleaning and sanitization",
+      "Curtain cleaning and treatment",
+      "Upholstered furniture cleaning",
+      "Allergen removal and odor treatment",
+      "Pre-treatment and post-cleaning protection",
+    ],
+    applications: [
+      "Residential apartments and villas",
+      "Family homes and living spaces",
+      "Offices and commercial interiors",
+      "Hotels and hospitality properties",
+    ],
+    approach:
+      "We assess the fabric type and condition before cleaning, selecting the appropriate shampoo and extraction method to remove deep-set dirt and stains while protecting the material's integrity and appearance.",
+    relatedSlugs: ["painting-services", "ac-repair-maintenance"],
+    seoTitle: "Sofa & Carpet Cleaning Dubai | Deep Cleaning",
+    seoDescription:
+      "Sofa and carpet cleaning in Dubai — shampoo and deep-extraction cleaning for sofas, carpets, mattresses and curtains in homes and offices. Request a quote.",
+    keywords: ["sofa cleaning Dubai", "carpet cleaning Dubai", "carpet shampoo Dubai", "sofa cleaning service Dubai", "mattress cleaning Dubai", "curtain cleaning Dubai", "upholstery cleaning Dubai"],
   },
 ];
 

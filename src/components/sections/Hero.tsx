@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FileBadge2, Building2, Phone } from "lucide-react";
+import { FileBadge2, CalendarCheck, MessageCircle, Phone } from "lucide-react";
 import { company } from "@/lib/company";
 import { Button } from "@/components/ui/Button";
 
@@ -41,15 +41,15 @@ export function Hero() {
 
           <div className="animate-fade-up" style={{ animationDelay: "0.24s" }}>
             <p className="mt-3 sm:mt-5 max-w-lg text-[15px] sm:text-[16.5px] lg:text-[18px] leading-relaxed text-white/75">
-              AC repair and maintenance, painting, sofa and carpet cleaning, and
-              parquet flooring for homes and businesses across Dubai.
+              Painting, AC repair and maintenance, parquet flooring, and sofa
+              and carpet cleaning for homes and businesses across Dubai.
             </p>
           </div>
 
           <div className="animate-fade-up" style={{ animationDelay: "0.36s" }}>
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
-              <Button href="/contact" variant="primary" withArrow className="justify-center sm:justify-start">
-                Request a Quote
+              <Button href="/#quick-quote" variant="primary" withArrow className="justify-center sm:justify-start">
+                Get a Quick Quote
               </Button>
               <Button href="/services" variant="ghost-light" className="justify-center sm:justify-start">
                 Explore Our Services
@@ -64,8 +64,12 @@ export function Hero() {
                 Licensed · No. {company.licenseNo}
               </li>
               <li className="flex items-center gap-2">
-                <Building2 className="h-4 w-4 text-brand-orange" aria-hidden="true" />
-                Residential &amp; commercial, all Dubai
+                <CalendarCheck className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                Serving Dubai since {company.foundingYear}
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="h-4 w-4 text-brand-orange" aria-hidden="true" />
+                WhatsApp {company.whatsappHours}
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-brand-orange" aria-hidden="true" />

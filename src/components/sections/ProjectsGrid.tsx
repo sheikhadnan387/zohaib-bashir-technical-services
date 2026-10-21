@@ -19,10 +19,6 @@ const filterTabs: FilterTab[] = [
     value: "All",
   },
   {
-    label: "Sofa & Carpet Cleaning",
-    value: "Cleaning",
-  },
-  {
     label: "Painting",
     value: "Painting",
   },
@@ -33,6 +29,10 @@ const filterTabs: FilterTab[] = [
   {
     label: "Flooring",
     value: "Flooring",
+  },
+  {
+    label: "Sofa & Carpet Cleaning",
+    value: "Cleaning",
   },
 ];
 

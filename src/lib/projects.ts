@@ -14,6 +14,22 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    id: "p3",
+    title: "Bedroom Repaint",
+    category: "Painting",
+    property: "Villa bedroom, Dubai",
+    serviceSlug: "painting-services",
+    summary: "Filling, sanding and two coats of warm-white emulsion with masked, crisp edges.",
+    before: {
+      image: "/images/projects/project-painting-before.webp",
+      alt: "Empty bedroom with scuffed walls, filler patches and masking tape before painting",
+    },
+    after: {
+      image: "/images/projects/project-painting.webp",
+      alt: "Freshly painted warm-white bedroom with painter removing the last masking tape",
+    },
+  },
+  {
     id: "p1",
     title: "Split AC Service & Deep Clean",
     category: "AC",
@@ -46,22 +62,6 @@ export const projects: ProjectItem[] = [
     },
   },
   {
-    id: "p3",
-    title: "Bedroom Repaint",
-    category: "Painting",
-    property: "Villa bedroom, Dubai",
-    serviceSlug: "painting-services",
-    summary: "Filling, sanding and two coats of warm-white emulsion with masked, crisp edges.",
-    before: {
-      image: "/images/projects/project-painting-before.webp",
-      alt: "Empty bedroom with scuffed walls, filler patches and masking tape before painting",
-    },
-    after: {
-      image: "/images/projects/project-painting.webp",
-      alt: "Freshly painted warm-white bedroom with painter removing the last masking tape",
-    },
-  },
-  {
     id: "p4",
     title: "Office Sofa Cleaning",
     category: "Cleaning",
@@ -79,4 +79,4 @@ export const projects: ProjectItem[] = [
   },
 ];
 
-export const projectCategories: ProjectCategory[] = ["AC", "Flooring", "Painting", "Cleaning"];
+export const projectCategories: ProjectCategory[] = ["Painting", "AC", "Flooring", "Cleaning"];

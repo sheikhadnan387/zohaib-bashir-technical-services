@@ -7,9 +7,9 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Services | AC, Painting, Cleaning, Flooring",
+  title: "Our Services | Painting, AC, Flooring, Cleaning",
   description:
-    "AC repair & maintenance, painting, sofa & carpet cleaning and parquet & wooden flooring in Dubai for homes and commercial properties.",
+    "Painting, AC repair & maintenance, parquet & wooden flooring and sofa & carpet cleaning in Dubai for homes and commercial properties.",
   path: "/services",
 });
 
@@ -30,7 +30,7 @@ export default function ServicesIndexPage() {
         breadcrumbItems={breadcrumbItems}
         eyebrow="What We Do"
         title="Our Four Core Services."
-        description="AC repair and maintenance, painting, sofa and carpet cleaning, and parquet flooring — delivered with the same standard of quality and attention to detail."
+        description="Painting, AC repair and maintenance, parquet flooring, and sofa and carpet cleaning — delivered with the same standard of quality and attention to detail."
         image="/images/pages/services-hero.webp"
         imageAlt="Professional technical services and maintenance in Dubai"
       />

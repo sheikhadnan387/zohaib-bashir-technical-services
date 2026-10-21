@@ -19,6 +19,9 @@ export const company = {
   siteUrl: "https://zohaibbashirtechnicalservices.com",
   // Approximate centre of Dubai Investment Park 1 — replace with the exact office pin.
   geo: { latitude: 24.985, longitude: 55.17 },
+  // Client-confirmed (Oct 2026).
+  foundingYear: 2021,
+  whatsappHours: "7am – 12am",
 } as const;
 
 /**
@@ -30,25 +33,31 @@ export const proofPoints: {
   guarantee: string | null; // e.g. "Workmanship guaranteed for 12 months"
   established: string | null; // e.g. "Serving Dubai since 2018"
 } = {
-  responseTime: null,
-  guarantee: null,
-  established: null,
+  responseTime: "WhatsApp replies every day, 7am to 12am",
+  guarantee: "Fixed written quote, no hidden charges. Not happy? Tell us within 48 hours and we come back to fix it free.",
+  established: "Serving Dubai since 2021",
 };
 
-// Areas shown in the "Serving Dubai" section — confirm with the client.
+// Areas shown in the "Serving Dubai" section — confirmed by the client (Oct 2026).
 export const serviceAreas = [
-  "Dubai Investment Park",
-  "Jumeirah Village Circle",
-  "Dubai Marina",
-  "Business Bay",
   "Downtown Dubai",
+  "Business Bay",
+  "Dubai Creek Harbour",
+  "Nad Al Sheba",
+  "Dubai Hills Estate",
+  "Jumeirah Village Circle (JVC)",
+  "Jumeirah Village Triangle (JVT)",
+  "Jumeirah Park",
+  "Jumeirah Lake Towers (JLT)",
+  "Dubai Marina",
+  "Jumeirah Beach Residence (JBR)",
+  "Bluewaters Island",
   "Arabian Ranches",
-  "Dubai Hills",
-  "Jumeirah",
-  "Al Barsha",
-  "Dubai Silicon Oasis",
-  "Motor City",
-  "Mirdif",
+  "DAMAC Hills",
+  "The Springs",
+  "The Meadows",
+  "Town Square",
+  "Mira Oasis",
 ] as const;
 
 export const socialLinks = {

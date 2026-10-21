@@ -2,12 +2,13 @@ import type { MetadataRoute } from "next";
 import { company } from "@/lib/company";
 import { services } from "@/lib/services";
 import { subServices } from "@/lib/subservices";
+import { areas } from "@/lib/areas";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Update this date when page content changes — a build-time "now" would make every URL look modified on every deploy.
-  const now = new Date("2026-10-14");
+  const now = new Date("2026-10-21");
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${company.siteUrl}/`, lastModified: now, changeFrequency: "monthly", priority: 1 },
@@ -33,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...subServiceRoutes];
+  const areaRoutes: MetadataRoute.Sitemap = areas.map((a) => ({
+    url: `${company.siteUrl}/areas/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...subServiceRoutes, ...areaRoutes];
 }

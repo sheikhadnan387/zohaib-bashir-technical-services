@@ -3,11 +3,14 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CheckCircle2, MapPin, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { serviceAreas } from "@/lib/company";
+import { areas } from "@/lib/areas";
 import { getSubServicesFor } from "@/lib/subservices";
 import { ServiceQuoteCard } from "@/components/ui/ServiceQuoteCard";
 import { services, getServiceBySlug, getRelatedServices } from "@/lib/services";
-import { buildMetadata, breadcrumbSchema, serviceSchema } from "@/lib/seo";
+import { buildMetadata, breadcrumbSchema, serviceSchema, faqSchema } from "@/lib/seo";
+import { serviceFaqs } from "@/lib/serviceFaqs";
+import { FaqList } from "@/components/ui/FaqList";
+import { QuickQuote } from "@/components/sections/QuickQuote";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -45,6 +48,7 @@ export default async function ServiceDetailPage({
 
   const related = getRelatedServices(service);
   const subs = getSubServicesFor(service.slug);
+  const faqs = serviceFaqs[service.slug] ?? [];
 
   const breadcrumbItems = [
     { name: "Home", path: "/" },
@@ -72,6 +76,13 @@ export default async function ServiceDetailPage({
           ),
         }}
       />
+
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
+        />
+      )}
 
       <PageHeader
         breadcrumbItems={breadcrumbItems}
@@ -154,6 +165,19 @@ export default async function ServiceDetailPage({
                   </Reveal>
                 </div>
               )}
+
+              {faqs.length > 0 && (
+                <div className="mt-14">
+                  <Reveal>
+                    <h2 className="font-heading text-[26px] font-bold text-brand-black sm:text-[30px]">
+                      {service.shortName} FAQs
+                    </h2>
+                    <div className="mt-6">
+                      <FaqList faqs={faqs} />
+                    </div>
+                  </Reveal>
+                </div>
+              )}
             </div>
 
             {/* Sidebar Visual & Property Types Column */}
@@ -163,6 +187,7 @@ export default async function ServiceDetailPage({
                   heading={`Get a quote for ${service.shortName}`}
                   serviceSlug={service.slug}
                   whatsappSubject={service.name}
+                  startingPrice={service.startingPrice}
                 />
               </Reveal>
 
@@ -211,12 +236,14 @@ export default async function ServiceDetailPage({
                       Available across Dubai
                     </p>
                     <ul className="mt-3 flex flex-wrap gap-2">
-                      {serviceAreas.slice(0, 8).map((area) => (
-                        <li
-                          key={area}
-                          className="rounded-full border border-brand-black/10 bg-white px-3 py-1 text-[13px] text-brand-black/75"
-                        >
-                          {area}
+                      {areas.slice(0, 8).map((area) => (
+                        <li key={area.slug}>
+                          <Link
+                            href={`/areas/${area.slug}`}
+                            className="focus-ring inline-block rounded-full border border-brand-black/10 bg-white px-3 py-1 text-[13px] text-brand-black/75 transition-colors hover:border-brand-orange hover:text-brand-orange-text"
+                          >
+                            {area.shortName}
+                          </Link>
                         </li>
                       ))}
                       <li className="rounded-full px-1 py-1 text-[13px] text-brand-black/55">+ all of Dubai</li>
@@ -243,6 +270,8 @@ export default async function ServiceDetailPage({
           )}
         </div>
       </section>
+
+      <QuickQuote initialService={service.slug} />
 
       <ContactCTA />
     </>

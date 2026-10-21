@@ -54,6 +54,11 @@ export function ServiceCard({ service, className }: { service: Service; classNam
           <p className="mt-1.5 line-clamp-2 text-[12.5px] sm:text-[13.5px] leading-relaxed text-white/75">
             {service.shortDescription}
           </p>
+          {service.startingPrice && (
+            <p className="mt-3 inline-flex rounded-full bg-brand-orange px-3 py-1 text-[12px] font-bold text-brand-black">
+              {service.startingPrice}
+            </p>
+          )}
           <div className="mt-3.5 sm:mt-4 flex items-center gap-1.5 text-[10.5px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-orange">
             <span>Explore Service</span>
             <ArrowUpRight

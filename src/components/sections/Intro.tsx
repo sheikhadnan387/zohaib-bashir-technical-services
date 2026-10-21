@@ -21,9 +21,9 @@ export function Intro() {
 
             <Reveal delay={0.1} className="mt-4 sm:mt-6">
               <p className="text-[16px] sm:text-[17px] lg:text-[19px] leading-relaxed text-brand-black/75">
-                We provide specialized services for residential and commercial
-                properties across Dubai — sofa and carpet cleaning, painting, AC repair and
-                maintenance, and parquet and wooden flooring, each delivered with the same
+                A Dubai technical services and home maintenance company since 2021,
+                we serve residential and commercial properties across Dubai — painting, AC repair and maintenance, parquet and
+                wooden flooring, and sofa and carpet cleaning, each delivered with the same
                 standard of quality, attention to detail and professional execution.
               </p>
               <p className="mt-3.5 sm:mt-5 text-[15px] sm:text-[16px] leading-relaxed text-brand-muted">
