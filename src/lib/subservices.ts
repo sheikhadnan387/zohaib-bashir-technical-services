@@ -234,6 +234,90 @@ export const subServices: SubService[] = [
     keywords: ["AC installation Dubai", "split AC installation Dubai", "AC replacement Dubai", "new AC installation Dubai", "AC repair Dubai"],
   },
   {
+    slug: "parquet-flooring-installation",
+    parentSlug: "parquet-wooden-flooring",
+    name: "Parquet Flooring Installation in Dubai",
+    shortName: "Parquet Installation",
+    blurb: "Solid and engineered parquet installed in straight-plank or herringbone patterns.",
+    heroTagline: "Parquet installed on a level, prepared floor.",
+    intro:
+      "Parquet is real wood, and how long it lasts depends on what happens before the first block goes down. Our parquet flooring installation in Dubai covers site measurement, subfloor checks and levelling, and installation of solid or engineered parquet in straight-plank or herringbone patterns, finished with skirting and transitions, for apartments, villas and offices.",
+    whatWeDo: [
+      "Site measurement and material planning",
+      "Subfloor assessment and levelling",
+      "Solid and engineered parquet installation",
+      "Straight-plank and herringbone patterns",
+      "Skirting, thresholds and transitions",
+      "Replacement of damaged boards in existing floors",
+    ],
+    approach:
+      "We measure the space, check the subfloor and correct levelling first, then install with attention to the pattern and the details at the edges, so the finished floor is level, durable and looks right from every doorway.",
+    faqs: [
+      {
+        q: "Do you install herringbone parquet?",
+        a: "Yes. We install solid and engineered parquet in straight-plank and herringbone patterns for apartments, villas and offices.",
+      },
+      {
+        q: "Solid or engineered parquet: which should I choose?",
+        a: "Both are real wood. We'll explain the options for your room and subfloor during the site visit, so you can choose with the full picture.",
+      },
+      {
+        q: "How is parquet installation priced?",
+        a: "Per square metre, based on the product, the pattern and the floor preparation needed. We measure and give you a fixed written quote before work starts.",
+      },
+      {
+        q: "Does the floor need to be level first?",
+        a: "Yes. We check the subfloor during the visit and include any levelling in the written quote, because an uneven base is the main reason wooden floors fail.",
+      },
+    ],
+    seoTitle: "Parquet Installation Dubai | Herringbone & Plank",
+    seoDescription:
+      "Parquet flooring installation in Dubai: solid and engineered parquet in herringbone or straight-plank patterns, with subfloor levelling. Fixed written quote.",
+    keywords: ["parquet installation Dubai", "parquet flooring installation Dubai", "parquet flooring services Dubai", "herringbone parquet Dubai", "wooden flooring installation Dubai"],
+  },
+  {
+    slug: "parquet-sanding-refinishing",
+    parentSlug: "parquet-wooden-flooring",
+    name: "Parquet Sanding & Refinishing in Dubai",
+    shortName: "Parquet Refinishing",
+    blurb: "Sanding and polishing worn parquet, fixing scratches and gaps, replacing damaged boards.",
+    heroTagline: "Bring worn parquet back instead of replacing it.",
+    intro:
+      "Because parquet is real wood, a tired, scratched or dull floor can usually be restored rather than replaced. Our parquet sanding and refinishing service in Dubai covers sanding and polishing worn parquet, fixing scratches and gaps, and replacing damaged boards so the repair blends in with the rest of the floor.",
+    whatWeDo: [
+      "Inspection of the existing floor",
+      "Sanding of worn and scratched parquet",
+      "Polishing and refinishing",
+      "Fixing scratches and gaps",
+      "Replacement of damaged boards",
+      "Skirting and edge details",
+    ],
+    approach:
+      "We look at the floor first and tell you honestly whether refinishing will work or whether some boards need replacing, then sand, repair and polish so old and new sections match.",
+    faqs: [
+      {
+        q: "Can you repair or polish my existing parquet?",
+        a: "Yes. We sand and polish worn parquet, fix scratches and gaps, and replace damaged boards so the repair blends in with the rest of the floor.",
+      },
+      {
+        q: "Is refinishing cheaper than new parquet?",
+        a: "Usually, because the existing wood is kept. We check the floor first and quote the right option in writing.",
+      },
+      {
+        q: "How is refinishing priced?",
+        a: "Per square metre, based on the condition of the floor and any boards that need replacing. You get a fixed written quote before work starts.",
+      },
+      {
+        q: "Do you refinish parquet in villas and apartments across Dubai?",
+        a: "Yes, in apartments, villas and offices across Dubai, including Jumeirah Park, Dubai Hills, Arabian Ranches and JVC.",
+      },
+    ],
+    seoTitle: "Parquet Refinishing Dubai | Sanding & Polishing",
+    seoDescription:
+      "Parquet sanding, polishing and refinishing in Dubai: restore worn wooden floors, fix scratches and gaps, replace damaged boards. Fixed written quote.",
+    keywords: ["parquet refinishing Dubai", "parquet sanding Dubai", "parquet polishing Dubai", "floor refinishing Dubai", "wooden floor polishing Dubai", "floor polishing Dubai"],
+  },
+  {
     slug: "vinyl-flooring",
     parentSlug: "parquet-wooden-flooring",
     name: "Vinyl Flooring in Dubai",
