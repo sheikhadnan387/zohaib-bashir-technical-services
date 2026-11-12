@@ -15,7 +15,14 @@ export interface Area {
   nearby: string[];
   /** Optional page title when an area has its own search volume (see SEO-KEYWORDS.md). */
   seoTitle?: string;
+  /** Optional AC paragraph for areas where people search for AC work (Search Console queries). */
+  acFocus?: string;
 }
+
+const towerAc =
+  "In tower apartments the work usually needs building management approval first, and where a building runs central cooling the central plant stays with them. We look after the AC units and ducts inside your home: filter and coil cleaning, drain lines, servicing and repairs, with the scope and price agreed in writing before we start.";
+const villaAc =
+  "Villas and townhouses usually have several split or ducted units. We service them unit by unit: filters, coils, drain lines and ducts, and list what each one needs in the written quote before any work starts.";
 
 const apartmentTip =
   "Most towers require a work permit or NOC from building management before contractors start. Tell us the building name and we'll prepare what the management office asks for.";
@@ -46,6 +53,8 @@ export const areas: Area[] = [
     homes: "Newer waterfront apartment towers.",
     note: `New handovers often need snagging touch-ups, AC servicing and upgraded flooring before move-in. ${apartmentTip}`,
     nearby: ["downtown-dubai", "nad-al-sheba"],
+    seoTitle: "Dubai Creek Harbour AC Cleaning & Repair",
+    acFocus: towerAc
   },
   {
     slug: "nad-al-sheba",
@@ -70,7 +79,8 @@ export const areas: Area[] = [
     homes: "A mix of mid-rise apartment buildings, townhouses and villas.",
     note: `With a lot of rented apartments, move-in and move-out repainting and sofa and carpet cleaning are frequent requests. ${apartmentTip}`,
     nearby: ["jumeirah-village-triangle", "jumeirah-park"],
-    seoTitle: "AC Repair JVC | Painting, Flooring & Sofa Cleaning",
+    seoTitle: "AC Repair JVC | Painting, Flooring & Cleaning",
+    acFocus: `JVC is a mix of apartment buildings, townhouses and villas. ${villaAc} ${towerAc}`
   },
   {
     slug: "jumeirah-village-triangle",
@@ -87,6 +97,7 @@ export const areas: Area[] = [
     homes: "Spacious family villas.",
     note: `Large villas mean more rooms to paint, several AC units and big sofas and rugs to clean. ${villaTip}`,
     nearby: ["jumeirah-village-triangle", "jumeirah-lake-towers"],
+    seoTitle: "Villa Painting, AC & Flooring in Jumeirah Park"
   },
   {
     slug: "jumeirah-lake-towers",
@@ -95,6 +106,8 @@ export const areas: Area[] = [
     homes: "Apartment and office towers around the lakes.",
     note: `We work on both homes and offices in JLT, including office repainting and flooring. ${apartmentTip}`,
     nearby: ["dubai-marina", "jumeirah-park"],
+    seoTitle: "AC Repair & Cleaning in JLT | Painting & Flooring",
+    acFocus: towerAc
   },
   {
     slug: "dubai-marina",
@@ -127,6 +140,7 @@ export const areas: Area[] = [
     homes: "Established villa and townhouse community.",
     note: `Older villas here often need full repaints, parquet repair or replacement, and AC servicing across several units. ${villaTip}`,
     nearby: ["dubai-hills-estate", "damac-hills"],
+    seoTitle: "Villa Painting, AC & Flooring in Arabian Ranches"
   },
   {
     slug: "damac-hills",
@@ -135,6 +149,8 @@ export const areas: Area[] = [
     homes: "Villas, townhouses and apartments around the golf course.",
     note: `Repainting, AC servicing and flooring upgrades are common for both villa owners and tenants. ${villaTip}`,
     nearby: ["arabian-ranches", "town-square"],
+    seoTitle: "AC Repair DAMAC Hills | Painting & Flooring",
+    acFocus: villaAc
   },
   {
     slug: "the-springs",

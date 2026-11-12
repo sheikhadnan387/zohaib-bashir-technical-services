@@ -14,7 +14,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Technical Services Dubai | Painting, AC, Flooring & Cleaning",
   description:
-    "Licensed Dubai technical services and home maintenance company since 2021: painting, AC repair & maintenance, parquet flooring and sofa & carpet cleaning. Studio painting from AED 350.",
+    "Licensed Dubai technical services company since 2021: painting, AC repair, parquet flooring and sofa & carpet cleaning. Fixed quotes, studio painting from AED 350.",
   path: "/",
   absoluteTitle: true,
 });

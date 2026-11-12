@@ -24,7 +24,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!area) return {};
   return buildMetadata({
     title: area.seoTitle ?? `Painting, AC, Flooring & Cleaning in ${area.shortName}`,
-    description: `Painting, AC repair, parquet flooring and sofa & carpet cleaning in ${area.name}, Dubai. Fixed written quotes, WhatsApp ${company.whatsappHours}. Studio painting from AED 350.`,
+    description: area.acFocus
+      ? `AC cleaning, servicing and repair in ${area.name}, plus painting, flooring and sofa cleaning. Fixed written quotes, WhatsApp ${company.whatsappHours}.`
+      : `Painting, AC repair, flooring and sofa & carpet cleaning in ${area.name}. Fixed written quotes, WhatsApp ${company.whatsappHours}. Studio painting from AED 350.`,
     path: `/areas/${area.slug}`,
     keywords: services.map((s) => `${s.shortName.toLowerCase()} ${area.shortName}`),
   });
@@ -42,7 +44,17 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   ];
   const nearby = area.nearby.map((s) => getAreaBySlug(s)).filter((a) => a !== undefined);
 
+  const acFaq = area.acFocus
+    ? [
+        {
+          q: `Do you clean and service AC units in ${area.name}?`,
+          a: `Yes. We clean, service and repair split and ducted AC units in ${area.name}: filters, coils, drain lines and ducts. Send the number of units on WhatsApp and we'll confirm the price before the visit.`,
+        },
+      ]
+    : [];
+
   const faqs = [
+    ...acFaq,
     {
       q: `Do you work in ${area.name}?`,
       a: `Yes. We provide painting, AC repair and maintenance, parquet and wooden flooring, and sofa and carpet cleaning in ${area.name} and across Dubai.`,
@@ -97,6 +109,34 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <p className="mt-5 text-[16.5px] leading-relaxed text-brand-muted">{area.note}</p>
             </Reveal>
 
+            {area.acFocus && (
+              <div className="mt-14">
+                <Reveal>
+                  <h2 className="font-heading text-[26px] font-bold text-brand-black sm:text-[30px]">
+                    AC Cleaning &amp; Repair in {area.shortName}
+                  </h2>
+                  <p className="mt-4 text-[16.5px] leading-relaxed text-brand-muted">{area.acFocus}</p>
+                  <ul className="mt-6 flex flex-wrap gap-3">
+                    {[
+                      { href: "/services/ac-repair-maintenance/ac-cleaning", label: "AC cleaning" },
+                      { href: "/services/ac-repair-maintenance/ac-duct-cleaning", label: "AC duct cleaning" },
+                      { href: "/services/ac-repair-maintenance", label: "AC repair & maintenance" },
+                    ].map((l) => (
+                      <li key={l.href}>
+                        <Link
+                          href={l.href}
+                          className="focus-ring inline-flex items-center gap-1.5 rounded-[6px] border border-brand-black/15 bg-white px-4 py-2.5 text-[14px] font-semibold text-brand-black transition-colors hover:border-brand-orange hover:text-brand-orange-text"
+                        >
+                          {l.label}
+                          <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              </div>
+            )}
+
             <div className="mt-14">
               <Reveal>
                 <h2 className="font-heading text-[26px] font-bold text-brand-black sm:text-[30px]">
@@ -104,7 +144,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </h2>
                 <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                   {services.map((s) => (
-                    <ServiceCard key={s.slug} service={s} className="h-[240px]" />
+                    <ServiceCard key={s.slug} service={s} className="min-h-[240px]" />
                   ))}
                 </div>
               </Reveal>

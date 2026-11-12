@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/sections/PageHeader";
 
 export const metadata: Metadata = buildMetadata({
   title: "Terms & Conditions",
-  description: `Terms and Conditions for the use of ${company.legalName}'s website and services.`,
+  description: `Terms and conditions for using the ${company.legalName} website and booking our painting, AC, flooring and cleaning services in Dubai.`,
   path: "/terms",
 });
 

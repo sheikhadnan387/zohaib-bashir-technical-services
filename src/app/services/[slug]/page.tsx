@@ -262,7 +262,7 @@ export default async function ServiceDetailPage({
                 </h2>
                 <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
                   {related.map((r) => (
-                    <ServiceCard key={r.slug} service={r} className="h-[220px]" />
+                    <ServiceCard key={r.slug} service={r} className="min-h-[220px]" />
                   ))}
                 </div>
               </Reveal>
